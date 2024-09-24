@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .header-btn {
+    @apply text-maincolor cursor-pointer rounded-lg p-1.5 transition-all duration-200 hover:bg-stone-200;
+  }
+
+  .text-gradient {
+    @apply inline-block bg-gradient-to-b from-[#2c553d] via-[#2BE977] via-50% to-[#063a1b] bg-clip-text font-bold text-transparent;
+  }
+
+  .text-gradient-sec {
+    background: #71f4a5;
+    background: radial-gradient(
+      ellipse farthest-side at right center,
+      #71f4a5 32%,
+      #0bcb58 79%,
+      #39f785 100%
+    );
+    @apply bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

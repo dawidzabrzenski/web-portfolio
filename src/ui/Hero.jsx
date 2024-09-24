@@ -16,17 +16,13 @@ function Hero() {
           I’m Dawid Zabrzeński
         </h1>
         <p className="text-[2rem] font-medium tracking-tight text-main">
-          a{" "}
-          <span className="text-transparent inline-block bg-gradient-to-b from-[#2c553d] via-[#2BE977] via-50% to-[#063a1b] bg-clip-text font-bold">
-            Front-End
-          </span>{" "}
-          Developer
+          a <span className="text-gradient">Front-End</span> Developer
         </p>
       </div>
       <p className="mb-3 text-lg font-light tracking-tight text-main">
         Specialized in crafting engaging web experience
       </p>
-      <button className="text-dark from-green-600 via-green-300 to-green-500 flex items-center justify-center gap-2 rounded-lg bg-gradient-to-tr from-0% via-70% to-100% px-6 py-2 font-medium">
+      <button className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-tr from-green-600 from-0% via-green-300 via-70% to-green-500 to-100% px-6 py-2 font-medium text-dark">
         Contact me <img className="w-8" src="./public/arrow-hero.svg" />
       </button>
       <div className="mt-4 flex gap-4">
