@@ -29,6 +29,17 @@ function Projects() {
           <ProjectsTech type="primary">Supabase</ProjectsTech>
         </ProjectsCard>
       </div>
+      <h4 className="text-lg">
+        Explore more projects on my{" "}
+        <span className="text-lighter-green relative">
+          GitHub profile
+          <img
+            className="absolute -right-5 -top-2"
+            src="./arrow-projects.svg"
+            alt="Doodle drawing of arrow"
+          />
+        </span>
+      </h4>
     </section>
   );
 }

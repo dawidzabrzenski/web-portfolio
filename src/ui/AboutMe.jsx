@@ -2,7 +2,7 @@ import AboutMeTech from "../components/AboutMeTech";
 
 function AboutMe() {
   return (
-    <section className="flex h-full flex-col-reverse items-center justify-center overflow-auto bg-[#090909] py-12 pb-40 md:flex-row md:items-center md:justify-center md:px-12">
+    <section className="flex h-full flex-col-reverse items-center justify-center overflow-auto bg-[#090909] py-12 pb-40 md:h-screen md:flex-row md:items-center md:justify-center md:px-12">
       <div className="flex flex-col items-center justify-center gap-2 px-8 md:mt-0 md:w-1/2 md:items-start md:gap-6">
         <div className="relative w-full md:space-y-4">
           <h2 className="text-gradient-sec relative z-20 text-center text-4xl font-semibold md:text-start">
