@@ -23,7 +23,12 @@ function Hero() {
         Specialized in crafting engaging web experience
       </p>
       <button className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-tr from-green-600 from-0% via-green-300 via-70% to-green-500 to-100% px-6 py-2 font-medium text-dark">
-        Contact me <img className="w-8" src="./arrow-hero.svg" />
+        Contact me{" "}
+        <img
+          className="w-8"
+          src="./arrow-hero.svg"
+          alt="Icon of an arrow pointing right"
+        />
       </button>
       <div className="mt-4 flex gap-4">
         <FaLinkedin
