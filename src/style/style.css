@@ -29,3 +29,14 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  color-scheme: light dark;
+  --theme-background-color: rgb(225, 225, 225);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-background-color: rgb(56, 55, 54);
+  }
+}
