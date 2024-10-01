@@ -12,12 +12,12 @@ function App() {
 
   return (
     <div className="h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden">
-      {/* <div className="snap-start">
+      <div className="snap-start">
         <Hero />
       </div>
       <div className="snap-start">
         <AboutMe />
-      </div> */}
+      </div>
       <div className="snap-start">
         <Projects />
       </div>

@@ -3,7 +3,7 @@ function AboutMeTech({ name }) {
     <li className="flex items-center gap-2 text-main">
       <img
         className="h-5 w-5"
-        src={`./public/icons/${name}.svg`}
+        src={`./icons/${name.toLowerCase()}.svg`}
         alt={`${name} Icon`}
       />
       {name}

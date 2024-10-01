@@ -10,7 +10,7 @@ function ProjectsCard({ name }) {
     <div className="rounded-lg bg-[#1B1B1B]">
       <img
         className="max-w-full rounded-t-lg"
-        src={`./public/${name}.jpg`}
+        src={`./${name.toLowerCase()}.jpg`}
         alt={`Screenshot from IT project for portfolio called ${name}`}
       />
       <div className="px-6 py-4">
