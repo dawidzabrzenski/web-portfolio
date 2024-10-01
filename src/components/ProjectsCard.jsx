@@ -1,16 +1,15 @@
-import ProjectsTech from "./ProjectsTech";
 import PropTypes from "prop-types";
 
 ProjectsCard.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-function ProjectsCard({ name }) {
+function ProjectsCard({ name, children }) {
   return (
     <div className="rounded-lg bg-[#1B1B1B]">
       <img
-        className="max-w-full rounded-t-lg"
-        src={`./${name.toLowerCase()}.jpg`}
+        className="min-h-12 rounded-t-lg"
+        src={`./${name.toLowerCase().replace(/\s/g, "")}.jpg`}
         alt={`Screenshot from IT project for portfolio called ${name}`}
       />
       <div className="px-6 py-4">
@@ -21,11 +20,7 @@ function ProjectsCard({ name }) {
           view, and manage tickets related to problems or tasks.
         </p>
         <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-          <ProjectsTech type="primary">React</ProjectsTech>
-          <ProjectsTech>React Hook Form</ProjectsTech>
-          <ProjectsTech>React Query</ProjectsTech>
-          <ProjectsTech type="primary">Tailwind</ProjectsTech>
-          <ProjectsTech type="primary">Supabase</ProjectsTech>
+          {children}
         </ul>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import Hero from "./ui/Hero";
 import AboutMe from "./ui/AboutMe";
 import Projects from "./ui/Projects";
+import Contact from "./ui/Contact";
 
 function App() {
   // return (
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className="h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden">
-      <div className="snap-start">
+      {/* <div className="snap-start">
         <Hero />
       </div>
       <div className="snap-start">
@@ -20,6 +21,9 @@ function App() {
       </div>
       <div className="snap-start">
         <Projects />
+      </div> */}
+      <div>
+        <Contact />
       </div>
     </div>
   );
