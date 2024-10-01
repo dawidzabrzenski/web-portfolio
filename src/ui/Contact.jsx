@@ -15,7 +15,11 @@ function Contact() {
           <ContactBtn name="Linkedin" />
         </div>
       </div>
-      <img src="./dotted.svg" className="absolute z-10" />
+      <img
+        src="./dotted.svg"
+        className="absolute z-10"
+        alt="Dotted background"
+      />
     </section>
   );
 }

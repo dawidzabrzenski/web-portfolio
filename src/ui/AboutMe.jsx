@@ -1,8 +1,3 @@
-import { FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { RiNextjsFill } from "react-icons/ri";
-import { BiLogoTypescript } from "react-icons/bi";
-
 import AboutMeTech from "../components/AboutMeTech";
 
 function AboutMe() {
@@ -15,7 +10,7 @@ function AboutMe() {
           </h2>
           <img
             className="absolute left-1/2 top-1/2 z-10 w-3/4 -translate-x-1/2 -translate-y-[80%] transform"
-            src="./public/person-1.png"
+            src="./person-1.png"
             alt="Person"
           />
         </div>
