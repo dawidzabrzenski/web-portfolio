@@ -1,37 +1,38 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-function Hero() {
-  const arrow = {
-    initial: { x: 0 },
-    animate: { x: 5 },
-  };
+const arrowVariants = {
+  initial: { x: 0 },
+  animate: { x: 5 },
+};
 
+const AnimatedText = ({ children, className, delay }) => (
+  <motion.p
+    className={className}
+    initial={{ opacity: 0, x: -15 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1, delay }}
+  >
+    {children}
+  </motion.p>
+);
+
+function Hero() {
   return (
     <section
       className="flex h-screen flex-col items-center justify-center gap-3 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url('./wave.svg')`,
-      }}
+      style={{ backgroundImage: `url('./wave.svg')` }}
     >
       <div className="flex flex-col items-center justify-center">
-        {/* Pierwsza część - tekst Hi, There oraz imię i tytuł */}
-        <motion.p
+        <AnimatedText
           className="text-[2rem] font-medium tracking-tight text-main md:text-[2.5rem]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          delay={0.5}
         >
           Hi, there
           <motion.span
             initial={{ rotate: -15 }}
-            animate={{
-              rotate: [15, -15, 15, -15, 15, -15, 15, -15, 15],
-            }}
-            transition={{
-              duration: 3.5,
-              ease: "easeInOut",
-            }}
+            animate={{ rotate: [15, -15, 15, -15, 15, -15, 15, -15, 15] }}
+            transition={{ duration: 3.5, ease: "easeInOut" }}
             style={{
               display: "inline-block",
               paddingLeft: "6px",
@@ -41,36 +42,30 @@ function Hero() {
           >
             👋
           </motion.span>
-        </motion.p>
-        <motion.h1
+        </AnimatedText>
+
+        <AnimatedText
           className="text-center text-4xl font-semibold text-main md:text-5xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          delay={1}
         >
           I’m Dawid Zabrzeński
-        </motion.h1>
-        <motion.p
+        </AnimatedText>
+
+        <AnimatedText
           className="text-center text-[2rem] font-medium tracking-tight text-main md:text-[2.5rem]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          delay={1.5}
         >
           a <span className="text-gradient">Front-End</span> Developer
-        </motion.p>
+        </AnimatedText>
       </div>
 
-      {/* Druga część - tekst Specialized in... */}
-      <motion.p
+      <AnimatedText
         className="mb-3 text-center text-lg font-light tracking-tight text-main md:text-xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2 }}
+        delay={2}
       >
         Specialized in crafting engaging web experience
-      </motion.p>
+      </AnimatedText>
 
-      {/* Trzecia część - przyciski */}
       <motion.button
         className="flex items-center justify-center gap-2 rounded-lg px-6 py-2 font-medium text-dark"
         initial={{ opacity: 0 }}
@@ -87,7 +82,7 @@ function Hero() {
           className="w-8"
           src="./arrow-hero.svg"
           alt="Icon of an arrow pointing right"
-          variants={arrow}
+          variants={arrowVariants}
         />
       </motion.button>
 
@@ -99,11 +94,11 @@ function Hero() {
       >
         <FaLinkedin
           className="size-6 transition-colors duration-300 hover:fill-main md:size-7"
-          color="4A4A4A"
+          color="#4A4A4A"
         />
         <FaGithub
           className="size-6 transition-colors duration-300 hover:fill-main md:size-7"
-          color="4A4A4A"
+          color="#4A4A4A"
         />
       </motion.div>
     </section>
