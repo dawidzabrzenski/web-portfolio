@@ -3,8 +3,8 @@ import ProjectsTech from "../components/ProjectsTech";
 
 function Projects() {
   return (
-    <section className="flex flex-col items-center bg-[#090909] px-4 text-main">
-      <h3 className="text-gradient-sec my-20 text-4xl font-semibold">
+    <section className="flex flex-col items-center gap-12 bg-[#090909] px-4 py-12 text-main">
+      <h3 className="text-gradient-sec py-2 text-4xl font-semibold md:text-5xl">
         Featured Projects
       </h3>
       <div className="flex flex-col gap-12">
