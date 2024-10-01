@@ -5,7 +5,7 @@ function Navbar() {
   const [active, setActive] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-40 p-4">
+    <nav className="sticky top-0 z-40 px-4 py-4">
       <div className="flex flex-row items-center justify-between">
         <h2 className="text-lg">
           zabrzenski<span className="text-gradient-sec">.dev</span>

@@ -11,7 +11,7 @@ function BurgerIcon({ value, setValue }) {
       <motion.button
         initial={false}
         onClick={() => setValue((cur) => !cur)}
-        className="relative h-12 w-12 rounded-full transition-colors"
+        className="relative h-12 w-12 rounded-full transition-colors focus:outline-none"
         animate={value ? "open" : "close"}
       >
         <motion.span
