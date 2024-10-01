@@ -68,9 +68,10 @@ function Hero() {
 
       <motion.button
         className="flex items-center justify-center gap-2 rounded-lg px-6 py-2 font-medium text-dark"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, x: 15 }}
         animate={{
           opacity: 1,
+          x: 0,
           background:
             "linear-gradient(to top right, #16a34a 0%, #86efac 70%, #22c55e 100%)",
         }}
@@ -88,8 +89,8 @@ function Hero() {
 
       <motion.div
         className="mt-4 flex gap-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, x: 15 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 3 }}
       >
         <FaLinkedin
