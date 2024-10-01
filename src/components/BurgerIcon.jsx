@@ -1,6 +1,6 @@
 import { motion, MotionConfig } from "framer-motion";
 
-function BurgerIcon({ active, setActive }) {
+function BurgerIcon({ value, setValue }) {
   return (
     <MotionConfig
       transition={{
@@ -10,9 +10,9 @@ function BurgerIcon({ active, setActive }) {
     >
       <motion.button
         initial={false}
-        onClick={() => setActive((cur) => !cur)}
+        onClick={() => setValue((cur) => !cur)}
         className="relative h-12 w-12 rounded-full transition-colors"
-        animate={active ? "open" : "close"}
+        animate={value ? "open" : "close"}
       >
         <motion.span
           style={{ left: "50%", top: "35%", x: "-50%", y: "-50%" }}

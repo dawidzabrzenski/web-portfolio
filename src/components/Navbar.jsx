@@ -10,7 +10,7 @@ function Navbar() {
         <h2 className="text-lg">
           zabrzenski<span className="text-gradient-sec">.dev</span>
         </h2>
-        <BurgerIcon active={active} setActive={setActive} />
+        <BurgerIcon value={active} setValue={setActive} />
       </div>
       {/* <ul className="mt-4 flex justify-center gap-4 rounded-full bg-stone-800 py-3">
         <li>Home</li>
