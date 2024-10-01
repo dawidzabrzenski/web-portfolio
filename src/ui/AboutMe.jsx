@@ -7,8 +7,8 @@ import AboutMeTech from "../components/AboutMeTech";
 
 function AboutMe() {
   return (
-    <section className="flex h-screen max-h-screen flex-col items-center justify-center gap-10 bg-[#090909]">
-      <div className="mt-60 flex flex-col items-center justify-center gap-4 px-8">
+    <section className="flex flex-col items-center justify-center gap-10 bg-[#090909] pb-36">
+      <div className="mt-80 flex flex-col items-center justify-center gap-4 px-8">
         <div className="relative w-full">
           <h2 className="text-gradient-sec relative z-20 text-center text-4xl font-semibold">
             About Me
