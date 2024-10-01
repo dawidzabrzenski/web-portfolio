@@ -3,7 +3,7 @@ import AboutMeTech from "../components/AboutMeTech";
 function AboutMe() {
   return (
     <section className="flex h-screen max-h-screen flex-col items-center justify-center gap-6 bg-[#090909]">
-      <div className="mt-60 flex flex-col items-center justify-center gap-2 px-8">
+      <div className="mt-40 flex flex-col items-center justify-center gap-2 px-8">
         <div className="relative w-full">
           <h2 className="text-gradient-sec relative z-20 text-center text-4xl font-semibold">
             About Me
