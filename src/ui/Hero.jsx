@@ -12,14 +12,14 @@ function Hero() {
         <p className="text-[2rem] font-medium tracking-tight text-main md:text-[2.5rem]">
           Hi, there 👋
         </p>
-        <h1 className="text-4xl font-semibold text-main md:text-5xl">
+        <h1 className="text-center text-4xl font-semibold text-main md:text-5xl">
           I’m Dawid Zabrzeński
         </h1>
-        <p className="text-[2rem] font-medium tracking-tight text-main md:text-[2.5rem]">
+        <p className="text-center text-[2rem] font-medium tracking-tight text-main md:text-[2.5rem]">
           a <span className="text-gradient">Front-End</span> Developer
         </p>
       </div>
-      <p className="mb-3 text-lg font-light tracking-tight text-main md:text-xl">
+      <p className="mb-3 text-center text-lg font-light tracking-tight text-main md:text-xl">
         Specialized in crafting engaging web experience
       </p>
       <button className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-tr from-green-600 from-0% via-green-300 via-70% to-green-500 to-100% px-6 py-2 font-medium text-dark">

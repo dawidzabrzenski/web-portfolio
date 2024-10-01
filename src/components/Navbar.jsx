@@ -12,11 +12,11 @@ function Navbar() {
         </h2>
         <BurgerIcon active={active} setActive={setActive} />
       </div>
-      <ul className="mt-4 flex justify-center gap-4 rounded-full bg-stone-800 py-3">
+      {/* <ul className="mt-4 flex justify-center gap-4 rounded-full bg-stone-800 py-3">
         <li>Home</li>
         <li>Test</li>
         <li>Test3</li>
-      </ul>
+      </ul> */}
     </nav>
   );
 }
