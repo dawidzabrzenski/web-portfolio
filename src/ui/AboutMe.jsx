@@ -1,9 +1,16 @@
 import AboutMeTech from "../components/AboutMeTech";
+import { motion } from "framer-motion";
 
 function AboutMe() {
   return (
     <section className="flex h-full flex-col-reverse items-center justify-center overflow-hidden bg-[#0A0A0A] py-12 pb-40 md:h-screen md:flex-row md:items-center md:justify-center md:px-12 md:py-0">
-      <div className="flex flex-col items-center justify-center gap-2 px-8 md:mt-0 md:w-1/2 md:items-start md:gap-6">
+      <motion.div
+        initial={{ opacity: 0, translateX: -50 }}
+        transition={{ delay: 0.2 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        onViewportLeave={{ opacity: 0 }}
+        className="flex flex-col items-center justify-center gap-2 px-8 md:mt-0 md:w-1/2 md:items-start md:gap-6"
+      >
         <div className="relative w-full md:space-y-4">
           <h2 className="text-gradient-sec relative z-20 text-center text-4xl font-semibold md:text-start">
             About Me
@@ -30,8 +37,12 @@ function AboutMe() {
             <AboutMeTech name="Sass" />
           </ul>
         </div>
-      </div>
-      <img
+      </motion.div>
+      <motion.img
+        initial={{ opacity: 0, translateX: 50 }}
+        transition={{ delay: 0.5 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        onViewportLeave={{ opacity: 0 }}
         className="relative z-10 w-[60%] translate-y-10 md:static md:h-[80%] md:w-auto"
         src="./person-1.png"
         alt="Person"
