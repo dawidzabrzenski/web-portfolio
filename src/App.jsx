@@ -6,9 +6,9 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="h-screen snap-y overflow-x-hidden md:snap-mandatory">
+    <div className="h-screen snap-y overflow-x-hidden">
       <Navbar />
-      <div className="snap-start">
+      <div id="home" className="snap-start">
         <Hero />
       </div>
       <div id="about" className="snap-start">

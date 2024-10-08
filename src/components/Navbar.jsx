@@ -9,7 +9,9 @@ function Navbar() {
     <nav className="fixed top-0 z-40 w-full overflow-hidden bg-gradient-to-b from-black px-4 py-4">
       <div className="grid w-full grid-cols-8 items-center px-4 md:grid-cols-12 md:px-12">
         <h2 className="col-span-7 text-start text-lg md:col-span-4 md:text-2xl">
-          zabrzenski<span className="text-gradient-sec">.dev</span>
+          <a href="#home">
+            zabrzenski<span className="text-gradient-sec">.dev</span>
+          </a>
         </h2>
 
         <ul className="col-span-4 hidden justify-center gap-x-12 text-lg md:block md:flex">
