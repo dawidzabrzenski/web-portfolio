@@ -7,18 +7,24 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 z-40 w-full overflow-hidden bg-gradient-to-b from-black px-4 py-4">
-      <div className="grid w-full grid-cols-8 items-center px-12 md:grid-cols-12">
-        <h2 className="col-span-7 text-start text-lg md:text-2xl">
+      <div className="grid w-full grid-cols-8 items-center px-4 md:grid-cols-12 md:px-12">
+        <h2 className="col-span-7 text-start text-lg md:col-span-4 md:text-2xl">
           zabrzenski<span className="text-gradient-sec">.dev</span>
         </h2>
 
-        <ul className="col-span-4 flex hidden justify-center gap-x-12 text-lg md:block">
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+        <ul className="col-span-4 hidden justify-center gap-x-12 text-lg md:block md:flex">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
 
-        <button className="text-gradient-sec col-span-4 hidden text-end text-xl md:block">
+        <button className="text-gradient-sec col-span-4 hidden text-end text-xl font-medium md:block">
           Resume
         </button>
 
@@ -39,9 +45,15 @@ function Navbar() {
             }}
             className="mt-4 flex justify-center gap-6 rounded-full bg-stone-800 py-3"
           >
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </motion.ul>
         </div>
       )}
