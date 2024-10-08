@@ -13,7 +13,7 @@ function App() {
   // );
 
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden">
+    <div className="h-screen snap-y overflow-scroll overflow-x-hidden md:snap-mandatory">
       <Navbar />
       <div className="snap-start">
         <Hero />
