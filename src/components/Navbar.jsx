@@ -6,7 +6,7 @@ function Navbar() {
   const [active, setActive] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-40 w-full overflow-hidden bg-gradient-to-b from-black px-4 py-4">
+    <nav className="fixed top-0 z-40 w-full overflow-hidden bg-gradient-to-b from-black px-4 py-4">
       <div className="grid w-full grid-cols-8 items-center px-12 md:grid-cols-12">
         <h2 className="col-span-7 text-start text-lg md:text-2xl">
           zabrzenski<span className="text-gradient-sec">.dev</span>
