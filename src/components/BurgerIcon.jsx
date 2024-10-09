@@ -13,6 +13,7 @@ function BurgerIcon({ value, setValue }) {
         onClick={() => setValue((cur) => !cur)}
         className="relative h-12 w-12 rounded-full transition-colors focus:outline-none"
         animate={value ? "open" : "close"}
+        aria-label="Burger Icon for Navbar"
       >
         <motion.span
           style={{ left: "50%", top: "35%", x: "-50%", y: "-50%" }}

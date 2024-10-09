@@ -55,8 +55,7 @@ function Hero() {
           className="text-center text-[2rem] font-medium tracking-tight text-main md:text-[2.5rem]"
           delay={1.5}
         >
-          a <span className="text-gradient selection:text-main">Front-End</span>{" "}
-          Developer
+          a <span className="text-gradient">Front-End</span> Developer
         </AnimatedText>
       </div>
 

@@ -8,7 +8,7 @@
   }
 
   .text-gradient {
-    @apply inline-block bg-gradient-to-b from-[#2c553d] via-[#2BE977] via-50% to-[#063a1b] bg-clip-text font-bold text-transparent;
+    @apply inline-block bg-gradient-to-b from-[#2c553d] via-[#2BE977] via-50% to-[#063a1b] bg-clip-text font-bold text-transparent selection:text-main;
   }
 
   .text-gradient-sec {
@@ -19,9 +19,14 @@
       #0bcb58 79%,
       #39f785 100%
     );
+
     @apply bg-clip-text text-transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-sec::selection {
+    color: #f5f5f4;
   }
 }
 

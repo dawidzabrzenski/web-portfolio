@@ -36,6 +36,11 @@ function AboutMe() {
             <AboutMeTech name="Supabase" />
             <AboutMeTech name="Sass" />
           </ul>
+          <img
+            src="dotted.png"
+            alt="Dotted background"
+            className="left-1/3 top-1/2 -z-10 hidden w-full -translate-x-1/2 -translate-y-1/2 transform md:absolute"
+          />
         </div>
       </motion.div>
       <motion.img
@@ -45,7 +50,7 @@ function AboutMe() {
         onViewportLeave={{ opacity: 0 }}
         className="relative z-10 w-[60%] translate-y-10 md:static md:h-[80%] md:w-auto"
         src="./person-1.png"
-        alt="Person"
+        alt="Picture of me, Dawid Zabrzeński"
       />
     </section>
   );
