@@ -3,7 +3,6 @@ import AboutMe from "./ui/AboutMe";
 import Projects from "./ui/Projects";
 import Contact from "./ui/Contact";
 import Navbar from "./components/Navbar";
-import Form from "./ui/Form";
 
 // snap-y snap-mandatory
 
@@ -23,7 +22,6 @@ function App() {
       <div id="contact" className="snap-start">
         <Contact />
       </div>
-      <Form />
     </div>
   );
 }

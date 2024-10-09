@@ -1,5 +1,6 @@
 import ContactBtn from "../components/ContactBtn";
 import { motion } from "framer-motion";
+import EmailForm from "../components/EmailForm";
 
 function Contact() {
   return (
@@ -29,6 +30,7 @@ function Contact() {
           className="z-10 hidden w-full transform md:absolute md:block"
         />
       </motion.div>
+      <EmailForm />
     </section>
   );
 }
