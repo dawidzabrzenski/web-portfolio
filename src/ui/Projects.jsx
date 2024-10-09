@@ -1,5 +1,6 @@
 import ProjectsCard from "../components/ProjectsCard";
 import ProjectsTech from "../components/ProjectsTech";
+import { motion } from "framer-motion";
 
 function Projects() {
   return (
@@ -8,37 +9,68 @@ function Projects() {
         Featured Projects
       </h3>
       <div className="flex flex-col gap-12">
-        <ProjectsCard name="IssueNest">
-          <ProjectsTech type="primary">React</ProjectsTech>
-          <ProjectsTech>React Hook Form</ProjectsTech>
-          <ProjectsTech>React Query</ProjectsTech>
-          <ProjectsTech type="primary">Tailwind</ProjectsTech>
-          <ProjectsTech type="primary">Supabase</ProjectsTech>
-        </ProjectsCard>
+        <motion.div
+          initial={{ opacity: 0, translateY: -50 }}
+          transition={{ delay: 0.2, duration: 1 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          onViewportLeave={{ opacity: 0 }}
+        >
+          <ProjectsCard name="IssueNest">
+            <ProjectsTech type="primary">React</ProjectsTech>
+            <ProjectsTech>React Hook Form</ProjectsTech>
+            <ProjectsTech>React Query</ProjectsTech>
+            <ProjectsTech type="primary">Tailwind</ProjectsTech>
+            <ProjectsTech type="primary">Supabase</ProjectsTech>
+          </ProjectsCard>
+        </motion.div>
 
-        <ProjectsCard name="Grip Barber">
-          <ProjectsTech type="primary">React</ProjectsTech>
-          <ProjectsTech type="primary">Tailwind</ProjectsTech>
-        </ProjectsCard>
+        <motion.div
+          initial={{ opacity: 0, translateY: -50 }}
+          transition={{ delay: 0.4, duration: 1 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          onViewportLeave={{ opacity: 0 }}
+        >
+          <ProjectsCard name="Grip Barber">
+            <ProjectsTech type="primary">React</ProjectsTech>
+            <ProjectsTech type="primary">Tailwind</ProjectsTech>
+          </ProjectsCard>
+        </motion.div>
 
-        <ProjectsCard name="The Wild Oasis">
-          <ProjectsTech type="primary">React</ProjectsTech>
-          <ProjectsTech>React Hook Form</ProjectsTech>
-          <ProjectsTech>React Query</ProjectsTech>
-          <ProjectsTech type="primary">Styled Components</ProjectsTech>
-          <ProjectsTech type="primary">Supabase</ProjectsTech>
-        </ProjectsCard>
+        <motion.div
+          initial={{ opacity: 0, translateY: -50 }}
+          transition={{ delay: 0.4, duration: 1 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          onViewportLeave={{ opacity: 0 }}
+        >
+          <ProjectsCard name="The Wild Oasis">
+            <ProjectsTech type="primary">React</ProjectsTech>
+            <ProjectsTech>React Hook Form</ProjectsTech>
+            <ProjectsTech>React Query</ProjectsTech>
+            <ProjectsTech type="primary">Styled Components</ProjectsTech>
+            <ProjectsTech type="primary">Supabase</ProjectsTech>
+          </ProjectsCard>
+        </motion.div>
       </div>
       <h4 className="text-lg">
         Explore more projects on my{" "}
-        <span className="relative text-lighter-green">
+        <motion.a
+          href="https://www.github.com/dawidzabrzenski"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover="animate"
+          className="relative text-lighter-green hover:cursor-pointer"
+        >
           GitHub profile
-          <img
-            className="absolute -right-5 -top-2"
+          <motion.img
+            className="absolute -right-5 -top-2 transform"
             src="./arrow-projects.svg"
             alt="Doodle drawing of arrow"
+            variants={{
+              initial: { x: 0, scale: 0 },
+              animate: { x: 20, scale: 1.2 },
+            }}
           />
-        </span>
+        </motion.a>
       </h4>
     </section>
   );

@@ -1,11 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const arrowVariants = {
-  initial: { x: 0 },
-  animate: { x: 5 },
-};
-
 const AnimatedText = ({ children, className, delay }) => (
   <motion.p
     className={className}
@@ -21,7 +16,7 @@ function Hero() {
   return (
     <section
       className="flex h-screen flex-col items-center justify-center gap-3 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('./wave.svg')` }}
+      style={{ backgroundImage: `url('./wave-opt.svg')` }}
     >
       <div className="flex flex-col items-center justify-center">
         <AnimatedText
@@ -83,7 +78,7 @@ function Hero() {
           className="w-8"
           src="./arrow-hero.svg"
           alt="Icon of an arrow pointing right"
-          variants={arrowVariants}
+          variants={{ initial: { scaleX: -10 }, animate: { scaleX: 5 } }}
         />
       </motion.button>
 

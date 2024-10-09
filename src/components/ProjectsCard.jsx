@@ -8,8 +8,8 @@ function ProjectsCard({ name, children }) {
   return (
     <div className="flex flex-col rounded-lg bg-[#1B1B1B] md:max-w-[80vw] md:flex-row">
       <img
-        className="min-h-12 rounded-t-lg md:max-w-[35vw] md:rounded-l-lg md:rounded-t-none"
-        src={`./${name.toLowerCase().replace(/\s/g, "")}.jpg`}
+        className="min-h-12 rounded-t-lg md:max-w-[35vw] md:rounded-l-[0.5rem] md:rounded-t-none"
+        src={`./projects/${name.toLowerCase().replace(/\s/g, "")}.webp`}
         alt={`Screenshot from IT project for portfolio called ${name}`}
       />
       <div className="flex flex-col justify-between px-6 py-4">

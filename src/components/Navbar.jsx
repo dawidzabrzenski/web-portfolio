@@ -3,6 +3,7 @@ import BurgerIcon from "./BurgerIcon";
 import { motion } from "framer-motion";
 import NavbarElement from "./NavbarElement";
 import { scrollToSection } from "../utilities/scroll";
+import NavbarList from "./NavbarList";
 
 function Navbar() {
   const [active, setActive] = useState(false);
@@ -20,15 +21,7 @@ function Navbar() {
         </h2>
 
         <ul className="col-span-4 hidden justify-center gap-x-12 text-lg md:block md:flex">
-          <li>
-            <NavbarElement href="about">About</NavbarElement>
-          </li>
-          <li>
-            <NavbarElement href="projects">Projects</NavbarElement>
-          </li>
-          <li>
-            <NavbarElement href="contact">Contact</NavbarElement>
-          </li>
+          <NavbarList setNavbar={setActive} />
         </ul>
 
         <div className="col-span-4 hidden px-12 text-end text-xl font-medium md:block">
@@ -57,15 +50,7 @@ function Navbar() {
             }}
             className="mt-4 flex justify-center gap-6 rounded-full bg-stone-800 py-3 drop-shadow-md"
           >
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <NavbarList setNavbar={setActive} />
           </motion.ul>
         </div>
       )}
