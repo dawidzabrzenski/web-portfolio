@@ -20,6 +20,7 @@ function ButtonRotating() {
         Resume
       </button>
       <motion.div
+        initial={false}
         className="absolute -inset-[1px] rounded-md transition-all duration-300"
         style={{
           background: !isHovered ? rotatingBg : "#71f4a5ff",
