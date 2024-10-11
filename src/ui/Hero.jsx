@@ -89,11 +89,11 @@ function Hero() {
         transition={{ duration: 1, delay: 3 }}
       >
         <FaLinkedin
-          className="size-6 transition-colors duration-300 hover:fill-main md:size-7"
+          className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
           color="#4A4A4A"
         />
         <FaGithub
-          className="size-6 transition-colors duration-300 hover:fill-main md:size-7"
+          className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
           color="#4A4A4A"
         />
       </motion.div>

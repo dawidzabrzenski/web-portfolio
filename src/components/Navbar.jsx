@@ -10,7 +10,7 @@ function Navbar() {
   const [active, setActive] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-40 w-full overflow-hidden bg-gradient-to-b from-black px-4 py-4 md:pt-8">
+    <nav className="fixed top-0 z-40 w-full overflow-hidden bg-gradient-to-b from-black via-black/70 px-4 py-4 md:pt-8">
       <div className="grid w-full grid-cols-8 items-center px-4 md:grid-cols-12 md:px-12">
         <h2 className="col-span-7 text-start text-lg md:col-span-4 md:text-2xl">
           <p

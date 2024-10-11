@@ -24,10 +24,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  .text-gradient-sec::selection {
-    color: #f5f5f4;
-  }
 }
 
 * {

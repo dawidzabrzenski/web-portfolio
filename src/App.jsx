@@ -16,7 +16,7 @@ function App() {
       <div id="about" className="snap-start">
         <AboutMe />
       </div>
-      <div id="projects" className="snap-start">
+      <div id="projects" className="snap-start scroll-pb-96">
         <Projects />
       </div>
       <div id="contact" className="snap-start">
