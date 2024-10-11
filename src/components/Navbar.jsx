@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import NavbarElement from "./NavbarElement";
 import { scrollToSection } from "../utilities/scroll";
 import NavbarList from "./NavbarList";
+import ButtonRotating from "./ButtonRotating";
 
 function Navbar() {
   const [active, setActive] = useState(false);
@@ -25,12 +26,13 @@ function Navbar() {
         </ul>
 
         <div className="col-span-4 hidden px-12 text-end text-xl font-medium md:block">
-          <button
+          {/* <button
             href="file:///test.pdf"
             className="inline border border-light-green px-8 py-1 transition-all duration-300 hover:bg-light-green hover:text-dark"
           >
             Resume
-          </button>
+          </button> */}
+          <ButtonRotating />
         </div>
 
         <div className="grid-row col-span-1 md:hidden">

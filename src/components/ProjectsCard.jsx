@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { FaGithub } from "react-icons/fa";
 
 ProjectsCard.propTypes = {
   name: PropTypes.string.isRequired,
@@ -14,9 +15,10 @@ function ProjectsCard({ name, children }) {
       />
       <div className="flex flex-col justify-between px-6 py-4">
         <div>
-          <h4 className="text-gradient-sec mb-2 text-3xl font-medium">
-            {name}
-          </h4>
+          <div className="mb-2 flex items-center justify-between">
+            <h4 className="text-gradient-sec text-3xl font-medium">{name}</h4>
+            <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
+          </div>
           <p className="text-sm font-light md:text-base">
             Basic web application designed to facilitate issue tracking and
             support management for businesses or teams. It allows users to

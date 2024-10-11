@@ -39,7 +39,7 @@ function AboutMe() {
           <img
             src="dotted.webp"
             alt="Dotted background"
-            className="left-1/3 top-1/2 -z-10 hidden w-full -translate-x-1/2 -translate-y-1/2 transform md:absolute md:block"
+            className="left-1/3 top-1/2 -z-10 hidden w-2/3 -translate-x-1/2 -translate-y-1/2 transform md:absolute md:block"
           />
         </div>
       </motion.div>

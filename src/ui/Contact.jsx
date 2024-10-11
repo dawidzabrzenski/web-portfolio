@@ -1,15 +1,21 @@
 import ContactBtn from "../components/ContactBtn";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import EmailForm from "../components/EmailForm";
+import { useRef } from "react";
 
 function Contact() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
     <section className="flex h-screen flex-col items-center justify-center bg-[#0A0A0A]">
       <motion.div
-        initial={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        whileInView={{ opacity: 1 }}
-        onViewportLeave={{ opacity: 0 }}
+        ref={ref}
+        style={{
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
+        }}
         className="relative flex flex-col items-center justify-center"
       >
         <h3 className="z-20 text-2xl text-main md:text-3xl">
@@ -30,7 +36,7 @@ function Contact() {
           className="z-10 hidden w-full transform md:absolute md:block"
         />
       </motion.div>
-      <EmailForm />
+      {/* <EmailForm /> */}
     </section>
   );
 }

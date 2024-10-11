@@ -78,7 +78,7 @@ function Hero() {
           className="w-8"
           src="./arrow-hero.svg"
           alt="Icon of an arrow pointing right"
-          variants={{ initial: { scaleX: -10 }, animate: { scaleX: 5 } }}
+          variants={{ initial: { x: 0 }, animate: { x: 5 } }}
         />
       </motion.button>
 
