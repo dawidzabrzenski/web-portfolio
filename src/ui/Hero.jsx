@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { scrollToSection } from "../utilities/scroll";
 
 const AnimatedText = ({ children, className, delay }) => (
   <motion.p
@@ -62,6 +63,7 @@ function Hero() {
       </AnimatedText>
 
       <motion.button
+        onClick={() => scrollToSection("contact")}
         className="flex items-center justify-center gap-2 rounded-lg px-6 py-2 font-medium text-dark"
         initial={{ opacity: 0, x: 15 }}
         animate={{
@@ -92,10 +94,16 @@ function Hero() {
           className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
           color="#4A4A4A"
         />
-        <FaGithub
-          className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
-          color="#4A4A4A"
-        />
+        <a
+          href="https://www.github.com/dawidzabrzenski"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub
+            className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
+            color="#4A4A4A"
+          />
+        </a>
       </motion.div>
     </section>
   );
