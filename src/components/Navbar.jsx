@@ -17,7 +17,7 @@ function Navbar() {
             className="hover:cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
-            zabrzenski<span className="text-gradient-sec">.dev</span>
+            dzabrzenski<span className="text-gradient-sec">.pl</span>
           </p>
         </h2>
 
@@ -26,12 +26,6 @@ function Navbar() {
         </ul>
 
         <div className="col-span-4 hidden px-12 text-end text-xl font-medium md:block">
-          {/* <button
-            href="file:///test.pdf"
-            className="inline border border-light-green px-8 py-1 transition-all duration-300 hover:bg-light-green hover:text-dark"
-          >
-            Resume
-          </button> */}
           <ButtonRotating />
         </div>
 

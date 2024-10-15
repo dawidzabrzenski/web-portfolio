@@ -1,11 +1,15 @@
-import ContactBtn from "../components/ContactBtn";
 import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+
+import ContactBtn from "../components/ContactBtn";
 import EmailForm from "../components/EmailForm";
-import { useRef } from "react";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref);
+
+  const [formStatus, setFormStatus] = useState(false);
 
   return (
     <section className="flex h-screen flex-col items-center justify-center bg-[#0A0A0A]">
@@ -26,9 +30,18 @@ function Contact() {
         </h2>
 
         <div className="z-20 flex flex-wrap justify-center gap-4 md:gap-8">
-          <ContactBtn name="Email" />
-          <ContactBtn name="GitHub" />
-          <ContactBtn name="Linkedin" />
+          <ContactBtn handleClick={setFormStatus} name="Email">
+            <FaEnvelope size={22} />
+          </ContactBtn>
+          <ContactBtn
+            name="GitHub"
+            href="https://www.github.com/dawidzabrzenski"
+          >
+            <FaGithub size={22} />
+          </ContactBtn>
+          <ContactBtn name="Linkedin">
+            <FaLinkedin size={22} />
+          </ContactBtn>
         </div>
         <img
           src="dotted.webp"
@@ -36,7 +49,7 @@ function Contact() {
           className="z-10 hidden w-full transform md:absolute md:block"
         />
       </motion.div>
-      {/* <EmailForm /> */}
+      {formStatus && <EmailForm handleForm={setFormStatus} />}
     </section>
   );
 }
