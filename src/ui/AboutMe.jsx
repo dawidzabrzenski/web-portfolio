@@ -8,7 +8,7 @@ function AboutMe() {
         initial={{ opacity: 0, translateX: -50 }}
         transition={{ delay: 0.2, duration: 1 }}
         whileInView={{ opacity: 1, translateX: 0 }}
-        onViewportLeave={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
         className="flex flex-col items-center justify-center gap-2 px-8 md:mt-0 md:w-1/2 md:items-start md:gap-6"
       >
         <div className="relative w-full md:space-y-4">
@@ -39,7 +39,7 @@ function AboutMe() {
           <img
             src="dotted.webp"
             alt="Dotted background"
-            className="left-1/3 top-1/2 -z-10 hidden w-2/3 -translate-x-1/2 -translate-y-1/2 transform md:absolute md:block"
+            className="absolute left-1/3 top-1/2 -z-10 hidden w-2/3 -translate-x-1/2 -translate-y-1/2 transform md:block"
           />
         </div>
       </motion.div>
@@ -47,7 +47,7 @@ function AboutMe() {
         initial={{ opacity: 0, translateX: 50 }}
         transition={{ delay: 0.2, duration: 1 }}
         whileInView={{ opacity: 1, translateX: 0 }}
-        onViewportLeave={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
         className="relative z-10 w-[60%] translate-y-10 md:static md:h-[60%] md:w-auto"
         src="./person-1.webp"
         alt="Picture of me, Dawid Zabrzeński"

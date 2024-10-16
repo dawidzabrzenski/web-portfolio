@@ -13,7 +13,7 @@ function Projects() {
           initial={{ opacity: 0, translateY: -50 }}
           transition={{ delay: 0.2, duration: 1 }}
           whileInView={{ opacity: 1, translateY: 0 }}
-          onViewportLeave={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
         >
           <ProjectsCard
             name="IssueNest"
@@ -31,7 +31,7 @@ function Projects() {
           initial={{ opacity: 0, translateY: -50 }}
           transition={{ delay: 0.4, duration: 1 }}
           whileInView={{ opacity: 1, translateY: 0 }}
-          onViewportLeave={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
         >
           <ProjectsCard
             name="Grip Barber"
@@ -46,7 +46,7 @@ function Projects() {
           initial={{ opacity: 0, translateY: -50 }}
           transition={{ delay: 0.4, duration: 1 }}
           whileInView={{ opacity: 1, translateY: 0 }}
-          onViewportLeave={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
         >
           <ProjectsCard
             name="The Wild Oasis"

@@ -1,5 +1,4 @@
 import { Toaster } from "react-hot-toast";
-import { Analytics } from "@vercel/analytics/react";
 
 import Hero from "./ui/Hero";
 import AboutMe from "./ui/AboutMe";
@@ -45,7 +44,6 @@ function App() {
           },
         }}
       />
-      <Analytics />
     </>
   );
 }
