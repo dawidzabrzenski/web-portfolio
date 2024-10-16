@@ -98,6 +98,7 @@ function Hero() {
           href="https://www.github.com/dawidzabrzenski"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Explore more projects on my GitHub profile"
         >
           <FaGithub
             className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"

@@ -5,7 +5,7 @@ ProjectsCard.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-function ProjectsCard({ name, children }) {
+function ProjectsCard({ name, children, href }) {
   return (
     <div className="flex flex-col rounded-lg bg-[#1B1B1B] md:max-w-[80vw] md:flex-row">
       <img
@@ -17,7 +17,14 @@ function ProjectsCard({ name, children }) {
         <div>
           <div className="mb-2 flex items-center justify-between">
             <h4 className="text-gradient-sec text-3xl font-medium">{name}</h4>
-            <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`GitHub link to the ${name} project repository`}
+            >
+              <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
+            </a>
           </div>
           <p className="text-sm font-light md:text-base">
             Basic web application designed to facilitate issue tracking and

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import BurgerIcon from "./BurgerIcon";
 import { motion } from "framer-motion";
-import NavbarElement from "./NavbarElement";
 import { scrollToSection } from "../utilities/scroll";
 import NavbarList from "./NavbarList";
 import ButtonRotating from "./ButtonRotating";

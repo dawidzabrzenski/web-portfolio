@@ -15,7 +15,10 @@ function Projects() {
           whileInView={{ opacity: 1, translateY: 0 }}
           onViewportLeave={{ opacity: 0 }}
         >
-          <ProjectsCard name="IssueNest">
+          <ProjectsCard
+            name="IssueNest"
+            href="https://github.com/dawidzabrzenski/issue-nest"
+          >
             <ProjectsTech type="primary">React</ProjectsTech>
             <ProjectsTech>React Hook Form</ProjectsTech>
             <ProjectsTech>React Query</ProjectsTech>
@@ -30,7 +33,10 @@ function Projects() {
           whileInView={{ opacity: 1, translateY: 0 }}
           onViewportLeave={{ opacity: 0 }}
         >
-          <ProjectsCard name="Grip Barber">
+          <ProjectsCard
+            name="Grip Barber"
+            href="https://github.com/dawidzabrzenski/GRIPBarber"
+          >
             <ProjectsTech type="primary">React</ProjectsTech>
             <ProjectsTech type="primary">Tailwind</ProjectsTech>
           </ProjectsCard>
@@ -42,7 +48,10 @@ function Projects() {
           whileInView={{ opacity: 1, translateY: 0 }}
           onViewportLeave={{ opacity: 0 }}
         >
-          <ProjectsCard name="The Wild Oasis">
+          <ProjectsCard
+            name="The Wild Oasis"
+            href="https://github.com/dawidzabrzenski/worldwise"
+          >
             <ProjectsTech type="primary">React</ProjectsTech>
             <ProjectsTech>React Hook Form</ProjectsTech>
             <ProjectsTech>React Query</ProjectsTech>
@@ -59,6 +68,7 @@ function Projects() {
           rel="noopener noreferrer"
           whileHover="animate"
           className="relative text-lighter-green hover:cursor-pointer"
+          aria-label="Explore more projects on my GitHub profile"
         >
           GitHub profile
           <motion.img
