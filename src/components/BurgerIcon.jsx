@@ -1,6 +1,6 @@
 import { motion, MotionConfig } from "framer-motion";
 
-function BurgerIcon({ value, setValue }) {
+function BurgerIcon({ value, setValue, setNavbarExpanded }) {
   return (
     <MotionConfig
       transition={{
@@ -10,7 +10,10 @@ function BurgerIcon({ value, setValue }) {
     >
       <motion.button
         initial={false}
-        onClick={() => setValue((cur) => !cur)}
+        onClick={() => {
+          setValue((cur) => !cur);
+          setNavbarExpanded(false);
+        }}
         className="relative h-12 w-12 rounded-full transition-colors focus:outline-none"
         animate={value ? "open" : "close"}
         aria-label="Burger Icon for Navbar"

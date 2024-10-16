@@ -19,7 +19,7 @@ function NavbarList({ setNavbar }) {
           Contact
         </NavbarElement>
       </li>
-      <li className="relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:block after:h-0.5 after:w-0 after:bg-light-green after:transition-all after:duration-300 hover:cursor-pointer hover:text-light-green hover:after:w-full md:hidden">
+      <li className="relative rounded-lg bg-light-green px-2 font-medium text-dark transition-colors duration-300 md:hidden">
         <a
           target="_blank"
           rel="noopener noreferrer"
