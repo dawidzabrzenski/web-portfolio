@@ -45,7 +45,7 @@ function Navbar() {
       {active && (
         <div className="flex justify-center overflow-hidden">
           <motion.ul
-            initial={{ opacity: 0, y: -80, width: "fit-content" }}
+            initial={{ opacity: 0, y: -80, width: "70vw" }}
             animate={[{ opacity: 1, y: 0 }, { width: "100vw" }]}
             transition={{
               opacity: { duration: 0.2 },
