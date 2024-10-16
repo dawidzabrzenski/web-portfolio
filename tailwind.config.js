@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       sans: "Jost, monospace",
+      kumbh: "Kumbh Sans, monospace",
     },
     extend: {
       colors: {

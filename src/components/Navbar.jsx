@@ -13,10 +13,11 @@ function Navbar() {
       <div className="grid w-full grid-cols-8 items-center px-4 md:grid-cols-12 md:px-12">
         <h2 className="col-span-7 text-start text-lg md:col-span-4 md:text-2xl">
           <p
-            className="hover:cursor-pointer"
+            className="font-kumbh font-medium hover:cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
-            dzabrzenski<span className="text-gradient-sec">.pl</span>
+            dzabrzenski
+            <span className="text-gradient-sec font-bold">.pl</span>
           </p>
         </h2>
 
