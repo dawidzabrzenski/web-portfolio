@@ -48,7 +48,7 @@ function AboutMe() {
         transition={{ delay: 0.2, duration: 1 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         onViewportLeave={{ opacity: 0 }}
-        className="relative z-10 w-[60%] translate-y-10 md:static md:h-[80%] md:w-auto"
+        className="relative z-10 w-[60%] translate-y-10 md:static md:h-[60%] md:w-auto"
         src="./person-1.webp"
         alt="Picture of me, Dawid Zabrzeński"
       />

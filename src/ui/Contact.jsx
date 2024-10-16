@@ -44,9 +44,9 @@ function Contact() {
           </ContactBtn>
         </div>
         <img
-          src="dotted.svg"
+          src="dotted.webp"
           alt="Dotted background"
-          className="absolute z-10 h-[50vh] w-full transform overflow-hidden lg:h-[75vh]"
+          className="absolute z-10 h-[50vh] transform overflow-hidden md:h-[60vh]"
         />
       </motion.div>
       {formStatus && <EmailForm handleForm={setFormStatus} />}

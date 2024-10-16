@@ -67,7 +67,7 @@ function Projects() {
           target="_blank"
           rel="noopener noreferrer"
           whileHover="animate"
-          className="relative text-lighter-green hover:cursor-pointer"
+          className="relative text-green-400 underline decoration-dotted underline-offset-2 hover:cursor-pointer"
           aria-label="Explore more projects on my GitHub profile"
         >
           GitHub profile
