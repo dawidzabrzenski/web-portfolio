@@ -25,9 +25,14 @@ function Navbar() {
           <NavbarList setNavbar={setActive} />
         </ul>
 
-        <div className="col-span-4 hidden px-12 text-end text-xl font-medium md:block">
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="col-span-4 hidden px-12 text-end text-xl font-medium md:block"
+        >
           <ButtonRotating />
-        </div>
+        </a>
 
         <div className="grid-row col-span-1 md:hidden">
           <BurgerIcon value={active} setValue={setActive} />
