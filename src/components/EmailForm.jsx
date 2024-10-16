@@ -42,6 +42,7 @@ function EmailForm({ handleForm }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="absolute top-0 z-50 flex h-full w-full items-center justify-center bg-stone-700/20 backdrop-blur-sm"
+      onClick={() => handleForm(false)}
     >
       <motion.div
         initial={{ y: -40 }}

@@ -13,7 +13,7 @@ function Navbar() {
       <div className="grid w-full grid-cols-8 items-center px-4 md:grid-cols-12 md:px-12">
         <h2 className="col-span-7 text-start text-lg md:col-span-4 md:text-2xl">
           <p
-            className="font-kumbh font-medium hover:cursor-pointer"
+            className="font-kumbh inline-block font-medium hover:cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
             dzabrzenski
@@ -25,14 +25,17 @@ function Navbar() {
           <NavbarList setNavbar={setActive} />
         </ul>
 
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="col-span-4 hidden px-12 text-end text-xl font-medium md:block"
-        >
-          <ButtonRotating />
-        </a>
+        <div className="col-span-4 hidden px-12 text-end text-xl font-medium md:block">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-end text-xl font-medium"
+            aria-label="Link to my resume"
+          >
+            <ButtonRotating />
+          </a>
+        </div>
 
         <div className="grid-row col-span-1 md:hidden">
           <BurgerIcon value={active} setValue={setActive} />
@@ -40,9 +43,9 @@ function Navbar() {
       </div>
 
       {active && (
-        <div className="flex justify-center">
+        <div className="flex justify-center overflow-hidden">
           <motion.ul
-            initial={{ opacity: 0, y: -80, width: "66%" }}
+            initial={{ opacity: 0, y: -80, width: "fit-content" }}
             animate={[{ opacity: 1, y: 0 }, { width: "100vw" }]}
             transition={{
               opacity: { duration: 0.2 },
