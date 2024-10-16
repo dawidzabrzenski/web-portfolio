@@ -29,7 +29,7 @@ function Contact() {
           Contact me
         </h2>
 
-        <div className="z-20 flex flex-wrap justify-center gap-4 md:gap-8">
+        <div className="z-20 mb-8 flex flex-wrap justify-center gap-4 md:gap-8">
           <ContactBtn handleClick={setFormStatus} name="Email">
             <FaEnvelope size={22} />
           </ContactBtn>
@@ -43,6 +43,9 @@ function Contact() {
             <FaLinkedin size={22} />
           </ContactBtn>
         </div>
+        <p className="text-sm text-stone-600">
+          You can also contact me directly on zabrzenskidev@gmail.com
+        </p>
         <img
           src="dotted.webp"
           alt="Dotted background"
