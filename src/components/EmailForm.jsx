@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   HiBriefcase,
   HiMiniUserCircle,
@@ -10,16 +10,19 @@ import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 
 import EmailFormInput from "./EmailFormInput";
+import Loader from "./Loader";
 
 const EMAIL_KEY = import.meta.env.VITE_EMAIL_KEY;
 const EMAIL_SERVICE = import.meta.env.VITE_EMAIL_SERVICE;
 const EMAIL_TEMPLATE = import.meta.env.VITE_EMAIL_TEMPLATE;
 
 function EmailForm({ handleForm }) {
+  const [isSending, setIsSending] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
     emailjs
       .sendForm(EMAIL_SERVICE, EMAIL_TEMPLATE, form.current, {
@@ -28,26 +31,34 @@ function EmailForm({ handleForm }) {
       .then(
         () => {
           toast.success("Email sent successfully.");
+          setIsSending(false);
           handleForm(false);
         },
         (error) => {
           toast.error("There was an error when sending an email.", error.text);
+          setIsSending(false);
         },
       );
   };
+
+  function handleBackdropClick(e) {
+    if (e.target === e.currentTarget) {
+      handleForm(false);
+    }
+  }
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="absolute top-0 z-50 flex h-full w-full items-center justify-center bg-stone-700/20 backdrop-blur-sm"
-      onClick={() => handleForm(false)}
+      className="absolute top-0 z-40 flex h-full w-full items-center justify-center bg-stone-700/20 backdrop-blur-sm"
+      onClick={handleBackdropClick}
     >
       <motion.div
         initial={{ y: -40 }}
         animate={{ y: 0 }}
-        className="relative flex h-full w-full flex-col gap-6 rounded-lg bg-dark p-12 lg:h-3/4 lg:w-2/4 lg:py-4"
+        className="z-60 relative flex h-full w-full flex-col gap-6 rounded-lg bg-[#1a1a1a] p-12 lg:h-4/5 lg:w-2/4 lg:py-8"
       >
         <h3 className="text-gradient text-center text-3xl">
           Send me an E-mail
@@ -82,7 +93,10 @@ function EmailForm({ handleForm }) {
             required
             className="h-full w-full resize-none rounded-lg px-2 py-2 outline-none outline-1 focus:border-light-green focus:outline-light-green"
           ></textarea>
-          <button className="ml-auto flex w-fit items-center gap-2 rounded-lg bg-stone-700 px-12 py-4 transition-all duration-300 hover:cursor-pointer hover:bg-[#71f4a5ff] hover:text-dark">
+          <button
+            disabled={isSending}
+            className="ml-auto flex w-fit items-center gap-2 rounded-lg bg-stone-800 px-12 py-4 transition-all duration-300 hover:cursor-pointer hover:bg-[#71f4a5ff] hover:text-dark"
+          >
             Send <HiPaperAirplane />
           </button>
         </form>
@@ -92,6 +106,11 @@ function EmailForm({ handleForm }) {
         >
           &#10005;
         </span>
+        {isSending && (
+          <div className="filter-b absolute left-0 top-0 z-[1000] flex h-full w-full items-center justify-center rounded-lg backdrop-blur-sm">
+            <Loader />
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );
