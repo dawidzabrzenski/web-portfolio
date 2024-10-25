@@ -5,7 +5,7 @@ ProjectsCard.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-function ProjectsCard({ name, children, href }) {
+function ProjectsCard({ name, children, href, desc, workInProgress }) {
   return (
     <div className="flex flex-col rounded-lg bg-[#1B1B1B] md:max-w-[80vw] md:flex-row">
       <img
@@ -17,20 +17,25 @@ function ProjectsCard({ name, children, href }) {
         <div>
           <div className="mb-2 flex items-center justify-between">
             <h4 className="text-gradient-sec text-3xl font-medium">{name}</h4>
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`GitHub link to the ${name} project repository`}
-            >
-              <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
-            </a>
+            <div className="flex items-center gap-4">
+              {workInProgress ? (
+                <p className="rounded-xl bg-orange-500 px-2 py-1 text-sm font-light transition-colors duration-300 hover:bg-orange-600">
+                  WORK IN PROGRESS
+                </p>
+              ) : (
+                ""
+              )}
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`GitHub link to the ${name} project repository`}
+              >
+                <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
+              </a>
+            </div>
           </div>
-          <p className="text-sm font-light md:text-base">
-            Basic web application designed to facilitate issue tracking and
-            support management for businesses or teams. It allows users to
-            submit, view, and manage tickets related to problems or tasks.
-          </p>
+          <p className="text-sm font-light md:text-base">{desc}</p>
         </div>
         <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm md:text-base">
           {children}

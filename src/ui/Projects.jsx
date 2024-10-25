@@ -17,7 +17,10 @@ function Projects() {
         >
           <ProjectsCard
             name="IssueNest"
+            workInProgress
             href="https://github.com/dawidzabrzenski/issue-nest"
+            desc="Basic web application designed to facilitate issue tracking and support management for businesses or teams. 
+It allows users to submit, view, and manage tickets related to problems or tasks."
           >
             <ProjectsTech type="primary">React</ProjectsTech>
             <ProjectsTech>React Hook Form</ProjectsTech>
@@ -36,6 +39,7 @@ function Projects() {
           <ProjectsCard
             name="Grip Barber"
             href="https://github.com/dawidzabrzenski/GRIPBarber"
+            desc="Single page application for barber shop. Fully responsive and prepared for mobile, tablet and PC viewports. Contains section with Google Maps locations and contact form."
           >
             <ProjectsTech type="primary">React</ProjectsTech>
             <ProjectsTech type="primary">Tailwind</ProjectsTech>
@@ -51,6 +55,7 @@ function Projects() {
           <ProjectsCard
             name="The Wild Oasis"
             href="https://github.com/dawidzabrzenski/worldwise"
+            desc="Made with Jonas Schmedtmann React course. Platform designed to simplify the process of finding and reserving cabins. The app provides users with a seamless experience for browsing, booking, and managing stays in cabins, whether for a weekend getaway or a long vacation. Its intuitive design ensures that both cabin owners and travelers can easily manage bookings and availabilities."
           >
             <ProjectsTech type="primary">React</ProjectsTech>
             <ProjectsTech>React Hook Form</ProjectsTech>
