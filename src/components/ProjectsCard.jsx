@@ -19,7 +19,7 @@ function ProjectsCard({ name, children, href, desc, workInProgress }) {
             <h4 className="text-gradient-sec text-3xl font-medium">{name}</h4>
             <div className="flex items-center gap-4">
               {workInProgress ? (
-                <p className="rounded-xl bg-orange-500 px-2 py-1 text-sm font-light transition-colors duration-300 hover:bg-orange-600">
+                <p className="rounded-xl bg-orange-500 px-2 py-1 text-xs font-light transition-colors duration-300 hover:bg-orange-600 sm:text-sm">
                   WORK IN PROGRESS
                 </p>
               ) : (
