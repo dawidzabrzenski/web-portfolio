@@ -9,7 +9,7 @@ function ProjectsCard({ name, children, href, desc, workInProgress }) {
   return (
     <div className="flex flex-col rounded-lg bg-[#1B1B1B] md:max-w-[80vw] md:flex-row">
       <img
-        className="min-h-12 rounded-t-lg md:max-w-[35vw] md:rounded-l-[0.5rem] md:rounded-t-none"
+        className="min-h-12 rounded-t-lg object-cover object-left md:max-w-[35vw] md:rounded-l-[0.5rem] md:rounded-t-none"
         src={`./projects/${name.toLowerCase().replace(/\s/g, "")}.webp`}
         alt={`Screenshot from IT project for portfolio called ${name}`}
       />
