@@ -1,4 +1,3 @@
-import ButtonRotating from "./ButtonRotating";
 import NavbarElement from "./NavbarElement";
 
 function NavbarList({ setNavbar }) {
