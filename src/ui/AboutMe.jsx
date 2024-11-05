@@ -49,7 +49,7 @@ function AboutMe() {
         whileInView={{ opacity: 1, translateX: 0 }}
         exit={{ opacity: 0 }}
         className="relative z-10 w-[60%] translate-y-10 md:static md:h-[60%] md:w-auto"
-        src="./person-1.webp"
+        src="./person-temp.webp"
         alt="Picture of me, Dawid Zabrzeński"
       />
     </section>
