@@ -1,5 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import { toastConfig } from "./config/toastConfig";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import Hero from "./ui/Hero";
 import AboutMe from "./ui/AboutMe";
@@ -37,6 +38,7 @@ function App() {
         containerStyle={{ margin: "16px" }}
         toastOptions={toastConfig}
       />
+      <SpeedInsights />
     </>
   );
 }
