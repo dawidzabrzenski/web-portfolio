@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { scrollToSection } from "../utilities/scroll";
+import toast from "react-hot-toast";
 
 const AnimatedText = ({ children, className, delay }) => (
   <motion.p
@@ -93,6 +94,7 @@ function Hero() {
         <FaLinkedin
           className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
           color="#4A4A4A"
+          onClick={() => toast("Still working on it!", { icon: "😉" })}
         />
         <a
           href="https://www.github.com/dawidzabrzenski"
