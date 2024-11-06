@@ -1,4 +1,5 @@
 import { Toaster } from "react-hot-toast";
+import { toastConfig } from "./config/toastConfig";
 
 import Hero from "./ui/Hero";
 import AboutMe from "./ui/AboutMe";
@@ -6,43 +7,35 @@ import Projects from "./ui/Projects";
 import Contact from "./ui/Contact";
 import Navbar from "./components/Navbar";
 
+const Section = ({ id, children }) => (
+  <div id={id} className="snap-start">
+    {children}
+  </div>
+);
+
 function App() {
   return (
     <>
-      <div className="h-screen snap-y snap-proximity overflow-x-hidden selection:bg-green-300">
+      <div className="scroll-container h-screen snap-y snap-proximity overflow-x-hidden selection:bg-green-300">
         <Navbar />
-        <div id="home" className="snap-start">
+        <Section id="home">
           <Hero />
-        </div>
-        <div id="about" className="snap-start">
+        </Section>
+        <Section id="about">
           <AboutMe />
-        </div>
-        <div id="projects" className="snap-start">
+        </Section>
+        <Section id="projects">
           <Projects />
-        </div>
-        <div id="contact" className="snap-start">
+        </Section>
+        <Section id="contact">
           <Contact />
-        </div>
+        </Section>
       </div>
       <Toaster
         position="top-center"
         gutter={12}
         containerStyle={{ margin: "16px" }}
-        toastOptions={{
-          success: {
-            duration: 5000,
-          },
-          error: {
-            duration: 6000,
-          },
-          style: {
-            fontSize: "16px",
-            maxWidth: "500px",
-            padding: "16px 36px",
-            backgroundColor: "#1F1F1F",
-            color: "#f5f5f4",
-          },
-        }}
+        toastOptions={toastConfig}
       />
     </>
   );

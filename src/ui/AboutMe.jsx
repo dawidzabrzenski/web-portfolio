@@ -1,13 +1,26 @@
 import AboutMeTech from "../components/AboutMeTech";
 import { motion } from "framer-motion";
 
+const MotionImage = ({ src, alt, className }) => (
+  <motion.img
+    loading="lazy"
+    initial={{ opacity: 0, x: 50 }}
+    transition={{ delay: 0.2, duration: 1 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0 }}
+    className={className}
+    src={src}
+    alt={alt}
+  />
+);
+
 function AboutMe() {
   return (
     <section className="flex h-full flex-col-reverse items-center justify-center overflow-hidden bg-[#0A0A0A] py-12 pb-40 md:h-screen md:flex-row md:items-center md:justify-center md:px-12 md:py-0">
       <motion.div
-        initial={{ opacity: 0, translateX: -50 }}
+        initial={{ opacity: 0, x: -50 }}
         transition={{ delay: 0.2, duration: 1 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0 }}
         className="flex flex-col items-center justify-center gap-2 px-8 md:mt-0 md:w-1/2 md:items-start md:gap-6"
       >
@@ -37,20 +50,17 @@ function AboutMe() {
             <AboutMeTech name="Sass" />
           </ul>
           <img
+            loading="lazy"
             src="dotted.webp"
             alt="Dotted background"
             className="absolute left-1/3 top-1/2 -z-10 hidden w-2/3 -translate-x-1/2 -translate-y-1/2 transform md:block"
           />
         </div>
       </motion.div>
-      <motion.img
-        initial={{ opacity: 0, translateX: 50 }}
-        transition={{ delay: 0.2, duration: 1 }}
-        whileInView={{ opacity: 1, translateX: 0 }}
-        exit={{ opacity: 0 }}
-        className="relative z-10 w-[60%] translate-y-10 md:static md:h-[60%] md:w-auto"
+      <MotionImage
         src="./person-temp.webp"
         alt="Picture of me, Dawid Zabrzeński"
+        className="relative z-10 w-[60%] translate-y-10 md:static md:h-[60%] md:w-auto"
       />
     </section>
   );
