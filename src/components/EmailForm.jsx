@@ -8,6 +8,7 @@ import {
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import EmailFormInput from "./EmailFormInput";
 import Loader from "./Loader";
@@ -15,13 +16,23 @@ import Loader from "./Loader";
 const EMAIL_KEY = import.meta.env.VITE_EMAIL_KEY;
 const EMAIL_SERVICE = import.meta.env.VITE_EMAIL_SERVICE;
 const EMAIL_TEMPLATE = import.meta.env.VITE_EMAIL_TEMPLATE;
+const RECAPTCHA_KEY = import.meta.env.VITE_RECAPTCHA_KEY;
 
 function EmailForm({ handleForm }) {
   const [isSending, setIsSending] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
   const form = useRef();
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!recaptchaToken) {
+      toast.error("Please complete the reCAPTCHA");
+      return;
+    }
     setIsSending(true);
 
     emailjs
@@ -93,12 +104,19 @@ function EmailForm({ handleForm }) {
             required
             className="h-full w-full resize-none rounded-lg px-2 py-2 outline-none outline-1 focus:border-light-green focus:outline-light-green"
           ></textarea>
-          <button
-            disabled={isSending}
-            className="ml-auto flex w-fit items-center gap-2 rounded-lg bg-stone-800 px-12 py-4 transition-all duration-300 hover:cursor-pointer hover:bg-[#71f4a5ff] hover:text-dark"
-          >
-            Send <HiPaperAirplane />
-          </button>
+          <div className="flex items-center justify-between">
+            <ReCAPTCHA
+              theme="dark"
+              sitekey="6LeC3HcqAAAAABNbfI22ioeHY9U0hJcJWjxaMKgV"
+              onChange={handleRecaptchaChange}
+            />
+            <button
+              disabled={isSending}
+              className="flex h-fit w-fit items-center gap-2 rounded-lg bg-stone-800 px-12 py-4 transition-all duration-300 hover:cursor-pointer hover:bg-[#71f4a5ff] hover:text-dark"
+            >
+              Send <HiPaperAirplane />
+            </button>
+          </div>
         </form>
         <span
           onClick={() => handleForm(false)}
