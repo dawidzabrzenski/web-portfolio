@@ -21,6 +21,7 @@ const RECAPTCHA_KEY = import.meta.env.VITE_RECAPTCHA_KEY;
 function EmailForm({ handleForm }) {
   const [isSending, setIsSending] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const isLocalhost = window.location.hostname.includes("localhost");
   const form = useRef();
 
   const handleRecaptchaChange = (token) => {
@@ -29,7 +30,7 @@ function EmailForm({ handleForm }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (!recaptchaToken) {
+    if (!recaptchaToken && !isLocalhost) {
       toast.error("Please complete the reCAPTCHA");
       return;
     }
