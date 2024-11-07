@@ -1,8 +1,8 @@
 import AboutMeTech from "../components/AboutMeTech";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const MotionImage = ({ src, alt, className }) => (
-  <motion.img
+  <m.img
     loading="lazy"
     initial={{ opacity: 0, x: 50 }}
     transition={{ delay: 0.2, duration: 1 }}
@@ -17,7 +17,7 @@ const MotionImage = ({ src, alt, className }) => (
 function AboutMe() {
   return (
     <section className="flex h-full flex-col-reverse items-center justify-center overflow-hidden bg-[#0A0A0A] py-12 pb-40 md:h-screen md:flex-row md:items-center md:justify-center md:px-12 md:py-0">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: -50 }}
         transition={{ delay: 0.2, duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -51,12 +51,12 @@ function AboutMe() {
           </ul>
           <img
             loading="lazy"
-            src="dotted.webp"
+            src="dotted-2.webp"
             alt="Dotted background"
             className="absolute left-1/3 top-1/2 -z-10 hidden w-2/3 -translate-x-1/2 -translate-y-1/2 transform md:block"
           />
         </div>
-      </motion.div>
+      </m.div>
       <MotionImage
         src="./person-temp.webp"
         alt="Picture of me, Dawid Zabrzeński"

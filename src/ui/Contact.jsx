@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
 import ContactBtn from "../components/ContactBtn";
@@ -13,7 +13,7 @@ function Contact() {
 
   return (
     <section className="flex h-screen flex-col items-center justify-center bg-[#0A0A0A]">
-      <motion.div
+      <m.div
         transition={{ duration: 1 }}
         ref={ref}
         style={{
@@ -47,11 +47,11 @@ function Contact() {
           You can also contact me directly on zabrzenskidev@gmail.com
         </p>
         <img
-          src="dotted.webp"
+          src="dotted-2.webp"
           alt="Dotted background"
           className="absolute z-10 h-[50vh] transform object-cover md:h-[65vh]"
         />
-      </motion.div>
+      </m.div>
       {formStatus && <EmailForm handleForm={setFormStatus} />}
     </section>
   );

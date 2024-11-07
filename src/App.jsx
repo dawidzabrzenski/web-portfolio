@@ -1,6 +1,7 @@
 import { Toaster } from "react-hot-toast";
 import { toastConfig } from "./config/toastConfig";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 import Hero from "./ui/Hero";
 import AboutMe from "./ui/AboutMe";
@@ -16,7 +17,7 @@ const Section = ({ id, children }) => (
 
 function App() {
   return (
-    <>
+    <LazyMotion features={domAnimation}>
       <div className="scroll-container h-screen snap-y snap-proximity overflow-x-hidden selection:bg-green-300">
         <Navbar />
         <Section id="home">
@@ -39,7 +40,7 @@ function App() {
         toastOptions={toastConfig}
       />
       <SpeedInsights />
-    </>
+    </LazyMotion>
   );
 }
 

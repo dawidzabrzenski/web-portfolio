@@ -1,6 +1,6 @@
 import ProjectsCard from "../components/ProjectsCard";
 import ProjectsTech from "../components/ProjectsTech";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const projectData = [
   {
@@ -40,14 +40,14 @@ const projectData = [
 ];
 
 const ProjectMotionWrapper = ({ children, delay }) => (
-  <motion.div
+  <m.div
     initial={{ opacity: 0, translateY: -50 }}
     transition={{ delay, duration: 1 }}
     whileInView={{ opacity: 1, translateY: 0 }}
     exit={{ opacity: 0 }}
   >
     {children}
-  </motion.div>
+  </m.div>
 );
 
 function Projects() {
@@ -76,7 +76,7 @@ function Projects() {
       </div>
       <h4 className="text-lg">
         Explore more projects on my{" "}
-        <motion.a
+        <m.a
           href="https://www.github.com/dawidzabrzenski"
           target="_blank"
           rel="noopener noreferrer"
@@ -85,7 +85,7 @@ function Projects() {
           aria-label="Explore more projects on my GitHub profile"
         >
           GitHub profile
-          <motion.img
+          <m.img
             className="absolute -right-5 -top-2 transform"
             src="./arrow-projects.svg"
             alt="Doodle drawing of arrow"
@@ -94,7 +94,7 @@ function Projects() {
               animate: { x: 20, scale: 1.2 },
             }}
           />
-        </motion.a>
+        </m.a>
       </h4>
     </section>
   );

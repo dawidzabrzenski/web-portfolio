@@ -1,17 +1,17 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { scrollToSection } from "../utilities/scroll";
 import toast from "react-hot-toast";
 
 const AnimatedText = ({ children, className, delay }) => (
-  <motion.p
+  <m.p
     className={className}
     initial={{ opacity: 0, x: -15 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 1, delay }}
   >
     {children}
-  </motion.p>
+  </m.p>
 );
 
 function Hero() {
@@ -26,7 +26,7 @@ function Hero() {
           delay={0.5}
         >
           Hi, there
-          <motion.span
+          <m.span
             initial={{ rotate: -15 }}
             animate={{ rotate: [15, -15, 15, -15, 15, -15, 15, -15, 15] }}
             transition={{ duration: 3.5, ease: "easeInOut" }}
@@ -38,7 +38,7 @@ function Hero() {
             }}
           >
             👋
-          </motion.span>
+          </m.span>
         </AnimatedText>
 
         <AnimatedText
@@ -63,7 +63,7 @@ function Hero() {
         Specialized in crafting engaging web experience
       </AnimatedText>
 
-      <motion.button
+      <m.button
         onClick={() => scrollToSection("contact")}
         className="flex items-center justify-center gap-2 rounded-lg px-6 py-2 font-medium text-dark"
         initial={{ opacity: 0, x: 15 }}
@@ -77,15 +77,15 @@ function Hero() {
         whileHover="animate"
       >
         <p className="text-dark md:text-lg">Contact me</p>
-        <motion.img
+        <m.img
           className="w-8"
           src="./arrow-hero.svg"
           alt="Icon of an arrow pointing right"
           variants={{ initial: { x: 0 }, animate: { x: 5 } }}
         />
-      </motion.button>
+      </m.button>
 
-      <motion.div
+      <m.div
         className="mt-4 flex gap-4"
         initial={{ opacity: 0, x: 15 }}
         animate={{ opacity: 1, x: 0 }}
@@ -107,7 +107,7 @@ function Hero() {
             color="#4A4A4A"
           />
         </a>
-      </motion.div>
+      </m.div>
     </section>
   );
 }
