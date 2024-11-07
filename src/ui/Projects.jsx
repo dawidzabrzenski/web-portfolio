@@ -2,6 +2,54 @@ import ProjectsCard from "../components/ProjectsCard";
 import ProjectsTech from "../components/ProjectsTech";
 import { motion } from "framer-motion";
 
+const projectData = [
+  {
+    name: "IssueNest",
+    workInProgress: true,
+    href: "https://github.com/dawidzabrzenski/issue-nest",
+    desc: "Basic web application designed to facilitate issue tracking and support management for businesses or teams. It allows users to submit, view, and manage tickets related to problems or tasks.",
+    techStack: [
+      { name: "React", type: "primary" },
+      { name: "React Hook Form" },
+      { name: "React Query" },
+      { name: "Tailwind", type: "primary" },
+      { name: "Supabase", type: "primary" },
+    ],
+  },
+  {
+    name: "Grip Barber",
+    href: "http://www.gripbarbershop.pl",
+    desc: "Single page application for barber shop. Fully responsive and prepared for mobile, tablet and PC viewports. Contains section with Google Maps locations and contact form.",
+    techStack: [
+      { name: "React", type: "primary" },
+      { name: "Tailwind", type: "primary" },
+    ],
+  },
+  {
+    name: "The Wild Oasis",
+    href: "https://github.com/dawidzabrzenski/worldwise",
+    desc: "Made with Jonas Schmedtmann React course. Platform designed to simplify the process of finding and reserving cabins...",
+    techStack: [
+      { name: "React", type: "primary" },
+      { name: "React Hook Form" },
+      { name: "React Query" },
+      { name: "Styled Components", type: "primary" },
+      { name: "Supabase", type: "primary" },
+    ],
+  },
+];
+
+const ProjectMotionWrapper = ({ children, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, translateY: -50 }}
+    transition={{ delay, duration: 1 }}
+    whileInView={{ opacity: 1, translateY: 0 }}
+    exit={{ opacity: 0 }}
+  >
+    {children}
+  </motion.div>
+);
+
 function Projects() {
   return (
     <section className="flex flex-col items-center gap-12 bg-[#0A0A0A] px-4 py-24 text-main md:pb-20">
@@ -9,61 +57,22 @@ function Projects() {
         Featured Projects
       </h3>
       <div className="flex flex-col gap-12">
-        <motion.div
-          initial={{ opacity: 0, translateY: -50 }}
-          transition={{ delay: 0.2, duration: 1 }}
-          whileInView={{ opacity: 1, translateY: 0 }}
-          exit={{ opacity: 0 }}
-        >
-          <ProjectsCard
-            name="IssueNest"
-            workInProgress
-            href="https://github.com/dawidzabrzenski/issue-nest"
-            desc="Basic web application designed to facilitate issue tracking and support management for businesses or teams. 
-It allows users to submit, view, and manage tickets related to problems or tasks."
-          >
-            <ProjectsTech type="primary">React</ProjectsTech>
-            <ProjectsTech>React Hook Form</ProjectsTech>
-            <ProjectsTech>React Query</ProjectsTech>
-            <ProjectsTech type="primary">Tailwind</ProjectsTech>
-            <ProjectsTech type="primary">Supabase</ProjectsTech>
-          </ProjectsCard>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, translateY: -50 }}
-          transition={{ delay: 0.4, duration: 1 }}
-          whileInView={{ opacity: 1, translateY: 0 }}
-          exit={{ opacity: 0 }}
-        >
-          <ProjectsCard
-            name="Grip Barber"
-            href="http://www.gripbarbershop.pl"
-            desc="Single page application for barber shop. Fully responsive and prepared for mobile, tablet and PC viewports. Contains section with Google Maps locations and contact form."
-          >
-            <ProjectsTech type="primary">React</ProjectsTech>
-            <ProjectsTech type="primary">Tailwind</ProjectsTech>
-          </ProjectsCard>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, translateY: -50 }}
-          transition={{ delay: 0.4, duration: 1 }}
-          whileInView={{ opacity: 1, translateY: 0 }}
-          exit={{ opacity: 0 }}
-        >
-          <ProjectsCard
-            name="The Wild Oasis"
-            href="https://github.com/dawidzabrzenski/worldwise"
-            desc="Made with Jonas Schmedtmann React course. Platform designed to simplify the process of finding and reserving cabins. The app provides users with a seamless experience for browsing, booking, and managing stays in cabins, whether for a weekend getaway or a long vacation. Its intuitive design ensures that both cabin owners and travelers can easily manage bookings and availabilities."
-          >
-            <ProjectsTech type="primary">React</ProjectsTech>
-            <ProjectsTech>React Hook Form</ProjectsTech>
-            <ProjectsTech>React Query</ProjectsTech>
-            <ProjectsTech type="primary">Styled Components</ProjectsTech>
-            <ProjectsTech type="primary">Supabase</ProjectsTech>
-          </ProjectsCard>
-        </motion.div>
+        {projectData.map((project, index) => (
+          <ProjectMotionWrapper key={project.name} delay={0.2 + index * 0.2}>
+            <ProjectsCard
+              name={project.name}
+              workInProgress={project.workInProgress}
+              href={project.href}
+              desc={project.desc}
+            >
+              {project.techStack.map((tech) => (
+                <ProjectsTech key={tech.name} type={tech.type}>
+                  {tech.name}
+                </ProjectsTech>
+              ))}
+            </ProjectsCard>
+          </ProjectMotionWrapper>
+        ))}
       </div>
       <h4 className="text-lg">
         Explore more projects on my{" "}
