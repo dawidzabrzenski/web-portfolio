@@ -28,7 +28,7 @@ const projectData = [
   {
     name: "The Wild Oasis",
     href: "https://github.com/dawidzabrzenski/worldwise",
-    desc: "Made with Jonas Schmedtmann React course. Platform designed to simplify the process of finding and reserving cabins...",
+    desc: "Made with Jonas Schmedtmann React course. Platform designed to simplify the process of finding and reserving cabins. The app provides users with a seamless experience for browsing, booking, and managing stays in cabins.",
     techStack: [
       { name: "React", type: "primary" },
       { name: "React Hook Form" },

@@ -4,9 +4,38 @@ import { TbWorldWww } from "react-icons/tb";
 
 ProjectsCard.propTypes = {
   name: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  href: PropTypes.string,
+  desc: PropTypes.string,
+  workInProgress: PropTypes.bool,
 };
 
+const WorkInProgressBadge = () => (
+  <p className="rounded-xl bg-orange-500 px-2 py-1 text-xs font-light transition-colors duration-300 hover:bg-orange-600 sm:text-sm">
+    WORK IN PROGRESS
+  </p>
+);
+
+const IconStyleWrapper = ({ children }) => (
+  <div className="opacity-25 transition-opacity duration-300 hover:cursor-pointer hover:opacity-100">
+    {children}
+  </div>
+);
+
+const ProjectLink = ({ href, label, icon }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+    <IconStyleWrapper>{icon}</IconStyleWrapper>
+  </a>
+);
+
 function ProjectsCard({ name, children, href, desc, workInProgress }) {
+  const isGitHubLink = href.includes("github");
+  const linkIcon = isGitHubLink ? (
+    <FaGithub className="size-6" />
+  ) : (
+    <TbWorldWww className="size-6" />
+  );
+
   return (
     <div className="flex flex-col rounded-lg bg-[#1B1B1B] md:max-w-[80vw] md:flex-row">
       <img
@@ -20,32 +49,12 @@ function ProjectsCard({ name, children, href, desc, workInProgress }) {
           <div className="mb-2 flex items-center justify-between">
             <h4 className="text-gradient-sec text-3xl font-medium">{name}</h4>
             <div className="flex items-center gap-4">
-              {workInProgress ? (
-                <p className="rounded-xl bg-orange-500 px-2 py-1 text-xs font-light transition-colors duration-300 hover:bg-orange-600 sm:text-sm">
-                  WORK IN PROGRESS
-                </p>
-              ) : (
-                ""
-              )}
-              {href.includes("github") ? (
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`GitHub link to the ${name} project repository`}
-                >
-                  <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
-                </a>
-              ) : (
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Link to the ${name} project website`}
-                >
-                  <TbWorldWww className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
-                </a>
-              )}
+              {workInProgress && <WorkInProgressBadge />}
+              <ProjectLink
+                href={href}
+                label={`${isGitHubLink ? "GitHub" : "Website"} link to the ${name} project`}
+                icon={linkIcon}
+              />
             </div>
           </div>
           <p className="text-sm font-light md:text-base">{desc}</p>
