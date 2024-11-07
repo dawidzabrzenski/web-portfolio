@@ -38,7 +38,7 @@ It allows users to submit, view, and manage tickets related to problems or tasks
         >
           <ProjectsCard
             name="Grip Barber"
-            href="https://github.com/dawidzabrzenski/GRIPBarber"
+            href="http://www.gripbarbershop.pl"
             desc="Single page application for barber shop. Fully responsive and prepared for mobile, tablet and PC viewports. Contains section with Google Maps locations and contact form."
           >
             <ProjectsTech type="primary">React</ProjectsTech>

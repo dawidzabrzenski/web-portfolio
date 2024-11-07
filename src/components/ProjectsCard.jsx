@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { FaGithub } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
 
 ProjectsCard.propTypes = {
   name: PropTypes.string.isRequired,
@@ -26,14 +27,25 @@ function ProjectsCard({ name, children, href, desc, workInProgress }) {
               ) : (
                 ""
               )}
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`GitHub link to the ${name} project repository`}
-              >
-                <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
-              </a>
+              {href.includes("github") ? (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`GitHub link to the ${name} project repository`}
+                >
+                  <FaGithub className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
+                </a>
+              ) : (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Link to the ${name} project website`}
+                >
+                  <TbWorldWww className="size-6 opacity-25 transition-all duration-300 hover:cursor-pointer hover:opacity-100" />
+                </a>
+              )}
             </div>
           </div>
           <p className="text-sm font-light md:text-base">{desc}</p>
