@@ -107,7 +107,7 @@ function EmailForm({ handleForm }) {
           <div className="flex items-center justify-between">
             <ReCAPTCHA
               theme="dark"
-              sitekey="6LeC3HcqAAAAABNbfI22ioeHY9U0hJcJWjxaMKgV"
+              sitekey={RECAPTCHA_KEY}
               onChange={handleRecaptchaChange}
             />
             <button
