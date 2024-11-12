@@ -105,7 +105,7 @@ function EmailForm({ handleForm }) {
             required
             className="h-full w-full resize-none rounded-lg px-2 py-2 outline-none outline-1 focus:border-light-green focus:outline-light-green"
           ></textarea>
-          <div className="flex items-center justify-between">
+          <div className="flex-col items-center justify-between gap-10 sm:flex-row">
             <ReCAPTCHA
               theme="dark"
               sitekey={RECAPTCHA_KEY}
