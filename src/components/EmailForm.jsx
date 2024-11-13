@@ -105,7 +105,7 @@ function EmailForm({ handleForm }) {
             required
             className="h-full w-full resize-none rounded-lg px-2 py-2 outline-none outline-1 focus:border-light-green focus:outline-light-green"
           ></textarea>
-          <div className="flex-col items-center justify-between gap-10 sm:flex-row">
+          <div className="flex-col items-center justify-between sm:flex-row">
             <ReCAPTCHA
               theme="dark"
               sitekey={RECAPTCHA_KEY}
@@ -113,7 +113,7 @@ function EmailForm({ handleForm }) {
             />
             <button
               disabled={isSending}
-              className="flex h-fit w-fit items-center gap-2 rounded-lg bg-stone-800 px-12 py-4 transition-all duration-300 hover:cursor-pointer hover:bg-[#71f4a5ff] hover:text-dark"
+              className="mt-4 flex h-fit w-fit items-center gap-2 rounded-lg bg-stone-800 px-12 py-4 transition-all duration-300 hover:cursor-pointer hover:bg-[#71f4a5ff] hover:text-dark"
             >
               Send <HiPaperAirplane />
             </button>
