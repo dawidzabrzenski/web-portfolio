@@ -64,6 +64,7 @@ function Hero() {
       </AnimatedText>
 
       <m.button
+        id="contactButton"
         onClick={() => scrollToSection("contact")}
         className="flex items-center justify-center gap-2 rounded-lg px-6 py-2 font-medium text-dark"
         initial={{ opacity: 0, x: 15 }}
