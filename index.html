@@ -101,5 +101,18 @@
     <div id="root"></div>
 
     <script type="module" src="/src/main.jsx" defer></script>
+
+    <script>
+      // Ustaw funkcję, która zadziała przy kliknięciu przycisku
+      document
+        .getElementById("projects")
+        .addEventListener("click", function () {
+          gtag("event", "click", {
+            event_category: "button",
+            event_label: "My Button",
+            value: 1,
+          });
+        });
+    </script>
   </body>
 </html>
