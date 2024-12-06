@@ -17,6 +17,18 @@ const projectData = [
     ],
   },
   {
+    name: "Resursive Tabs",
+    workInProgress: true,
+    href: "https://github.com/dawidzabrzenski/recursive-tabs-next",
+    desc: "SPA for creating resursive tabs in Next.js. In the future it will also include drag and drop functionality. For now it offers infinite depth level. I've implemented many custom and reusable Tailwind classes.",
+    techStack: [
+      { name: "Next.js", type: "primary" },
+      { name: "React Hook Form" },
+      { name: "Tailwind", type: "primary" },
+      { name: "dnd kit" },
+    ],
+  },
+  {
     name: "Grip Barber",
     href: "http://www.gripbarbershop.pl",
     desc: "Single page application for barber shop. Fully responsive and prepared for mobile, tablet and PC viewports. Contains section with Google Maps locations and contact form.",

@@ -88,31 +88,8 @@
     <meta name="twitter:image" content="/path/to/your/image.jpg" />
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P8C6RF87"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
 
     <script type="module" src="/src/main.jsx" defer></script>
-
-    <script>
-      // Ustaw funkcję, która zadziała przy kliknięciu przycisku
-      document
-        .getElementById("projects")
-        .addEventListener("click", function () {
-          gtag("event", "click", {
-            event_category: "button",
-            event_label: "My Button",
-            value: 1,
-          });
-        });
-    </script>
   </body>
 </html>
