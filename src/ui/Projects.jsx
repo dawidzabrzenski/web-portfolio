@@ -17,10 +17,10 @@ const projectData = [
     ],
   },
   {
-    name: "Resursive Tabs",
+    name: "Recursive Tabs",
     workInProgress: true,
     href: "https://github.com/dawidzabrzenski/recursive-tabs-next",
-    desc: "SPA for creating resursive tabs in Next.js. In the future it will also include drag and drop functionality. For now it offers infinite depth level. I've implemented many custom and reusable Tailwind classes.",
+    desc: "SPA for creating recursive tabs in Next.js. In the future it will also include drag and drop functionality. For now it offers infinite depth level. I've implemented many custom and reusable Tailwind classes.",
     techStack: [
       { name: "Next.js", type: "primary" },
       { name: "React Hook Form" },
