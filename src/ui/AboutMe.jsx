@@ -60,7 +60,7 @@ function AboutMe() {
       <MotionImage
         src="./person-temp.webp"
         alt="Picture of me, Dawid Zabrzeński"
-        className="relative z-10 w-[60%] translate-y-10 md:static md:h-[60%] md:w-auto"
+        className="relative z-10 w-[60%] translate-y-10 md:static md:w-[50%] xl:h-[60%] xl:w-auto"
       />
     </section>
   );

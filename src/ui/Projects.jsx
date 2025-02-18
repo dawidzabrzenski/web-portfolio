@@ -4,6 +4,26 @@ import { m } from "framer-motion";
 
 const projectData = [
   {
+    name: "GFCorp Link",
+    workInProgress: true,
+    href: "https://github.com/dawidzabrzenski/gfcorp-link",
+    desc: "A modern web application designed to integrate with the Comarch XL ERP system via a REST API. Developed for my current company, this project streamlines data management and enhances usability through an intuitive frontend. Currently, the application supports user authentication with accounts stored in a MongoDB database. Passwords are securely encrypted, and successful login provides a JWT token, which is used to protect application routes and ensure secure access.",
+    techStack: [
+      { name: "React", type: "primary" },
+      { name: "Redux" },
+      { name: "Node.js", type: "primary" },
+      { name: "Express", type: "primary" },
+      { name: "MongoDB", type: "primary" },
+      { name: "Mongoose", type: "primary" },
+      { name: "Axios" },
+      { name: "React Hook Form" },
+      { name: "Tanstack Query" },
+      { name: "Tanstack Table" },
+      { name: "Tailwind CSS", type: "primary" },
+      { name: "Material Icons" },
+    ],
+  },
+  {
     name: "IssueNest",
     workInProgress: true,
     href: "https://github.com/dawidzabrzenski/issue-nest",
@@ -12,19 +32,18 @@ const projectData = [
       { name: "React", type: "primary" },
       { name: "React Hook Form" },
       { name: "React Query" },
-      { name: "Tailwind", type: "primary" },
+      { name: "Tailwind CSS", type: "primary" },
       { name: "Supabase", type: "primary" },
     ],
   },
   {
     name: "Recursive Tabs",
-    workInProgress: true,
     href: "https://github.com/dawidzabrzenski/recursive-tabs-next",
     desc: "SPA for creating recursive tabs in Next.js. In the future it will also include drag and drop functionality. For now it offers infinite depth level. I've implemented many custom and reusable Tailwind classes.",
     techStack: [
       { name: "Next.js", type: "primary" },
       { name: "React Hook Form" },
-      { name: "Tailwind", type: "primary" },
+      { name: "Tailwind CSS", type: "primary" },
       { name: "dnd kit" },
     ],
   },
@@ -34,7 +53,7 @@ const projectData = [
     desc: "Single page application for barber shop. Fully responsive and prepared for mobile, tablet and PC viewports. Contains section with Google Maps locations and contact form.",
     techStack: [
       { name: "React", type: "primary" },
-      { name: "Tailwind", type: "primary" },
+      { name: "Tailwind CSS", type: "primary" },
     ],
   },
   {
