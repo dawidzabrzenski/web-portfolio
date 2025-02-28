@@ -12,7 +12,15 @@ function Navbar() {
   return (
     <nav className="fixed top-0 z-40 w-full overflow-hidden bg-gradient-to-b from-black via-black/70 px-4 py-4 md:pt-8">
       <div className="grid w-full grid-cols-8 items-center px-4 md:grid-cols-12 md:px-12">
-        <h2 className="col-span-7 w-fit text-start text-lg transition-colors duration-300 hover:text-green-400 md:col-span-4 md:text-2xl">
+        <motion.h2
+          initial={{ opacity: 0, x: -10 }}
+          animate={[{ opacity: 1, x: 0 }]}
+          transition={{
+            opacity: { duration: 1 },
+            y: { duration: 0.6 },
+          }}
+          className="col-span-7 w-fit text-start text-lg transition-colors duration-300 hover:text-green-400 md:col-span-4 md:text-2xl"
+        >
           <p
             className="inline-block font-kumbh font-medium hover:cursor-pointer"
             onClick={() => scrollToSection("home")}
@@ -20,7 +28,7 @@ function Navbar() {
             dzabrzenski
             <span className="text-gradient-sec font-bold">.pl</span>
           </p>
-        </h2>
+        </motion.h2>
 
         <ul className="col-span-4 hidden justify-center gap-x-12 text-lg md:block md:flex">
           <NavbarList setNavbar={setActive} />
