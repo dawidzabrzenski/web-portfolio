@@ -14,6 +14,21 @@ const MotionImage = ({ src, alt, className }) => (
   />
 );
 
+const technologies = [
+  { name: "React" },
+  { name: "JavaScript" },
+  { name: "Next" },
+  { name: "TypeScript" },
+  { name: "Redux" },
+  { name: "Tailwind" },
+  { name: "Supabase" },
+  { name: "Sass" },
+  { name: "Node.js" },
+  { name: "Express.js" },
+  { name: "MongoDB" },
+  { name: "Mongoose" },
+];
+
 function AboutMe() {
   return (
     <section className="flex h-full flex-col-reverse items-center justify-center overflow-hidden bg-[#0A0A0A] py-12 pb-40 md:h-screen md:flex-row md:items-center md:justify-center md:px-12 md:py-0">
@@ -48,6 +63,10 @@ function AboutMe() {
             <AboutMeTech name="Tailwind" />
             <AboutMeTech name="Supabase" />
             <AboutMeTech name="Sass" />
+            <AboutMeTech name="Node.js" />
+            <AboutMeTech name="Express.js" />
+            <AboutMeTech name="MongoDB" />
+            <AboutMeTech name="Mongoose" />
           </ul>
           <img
             loading="lazy"

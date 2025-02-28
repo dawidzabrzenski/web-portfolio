@@ -8,6 +8,7 @@ import AboutMe from "./ui/AboutMe";
 import Projects from "./ui/Projects";
 import Contact from "./ui/Contact";
 import Navbar from "./components/Navbar";
+import Carousel from "./components/Carousel";
 
 const Section = ({ id, children }) => (
   <div id={id} className="snap-start">
@@ -28,6 +29,9 @@ function App() {
         </Section>
         <Section id="projects">
           <Projects />
+        </Section>
+        <Section id="contact">
+          <Carousel />
         </Section>
         <Section id="contact">
           <Contact />
