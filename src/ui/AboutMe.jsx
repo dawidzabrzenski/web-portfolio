@@ -15,18 +15,18 @@ const MotionImage = ({ src, alt, className }) => (
 );
 
 const technologies = [
-  { name: "React" },
-  { name: "JavaScript" },
-  { name: "Next" },
-  { name: "TypeScript" },
-  { name: "Redux" },
-  { name: "Tailwind" },
-  { name: "Supabase" },
-  { name: "Sass" },
-  { name: "Node.js" },
-  { name: "Express.js" },
-  { name: "MongoDB" },
-  { name: "Mongoose" },
+  "React",
+  "JavaScript",
+  "Next",
+  "TypeScript",
+  "Redux",
+  "Tailwind",
+  "Supabase",
+  "Sass",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
 ];
 
 function AboutMe() {
@@ -55,18 +55,9 @@ function AboutMe() {
             Technologies that I use
           </h3>
           <ul className="grid w-full grid-cols-2 gap-x-6 gap-y-4 text-main">
-            <AboutMeTech name="React" />
-            <AboutMeTech name="JavaScript" />
-            <AboutMeTech name="Next" />
-            <AboutMeTech name="TypeScript" />
-            <AboutMeTech name="Redux" />
-            <AboutMeTech name="Tailwind" />
-            <AboutMeTech name="Supabase" />
-            <AboutMeTech name="Sass" />
-            <AboutMeTech name="Node.js" />
-            <AboutMeTech name="Express.js" />
-            <AboutMeTech name="MongoDB" />
-            <AboutMeTech name="Mongoose" />
+            {technologies.map((tech) => (
+              <AboutMeTech name={tech} />
+            ))}
           </ul>
           <img
             loading="lazy"
