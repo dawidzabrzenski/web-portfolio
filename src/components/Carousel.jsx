@@ -1,7 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/react-splide/css";
-import CarouselCard from "./CarouselCard"; // Import komponentu
+import CarouselCard from "./CarouselCard";
 
 const technologies = [
   "React",
@@ -33,6 +33,12 @@ export default function Carousel() {
           drag: false,
           autoScroll: {
             speed: 1,
+          },
+          breakpoints: {
+            1280: { perPage: 7 },
+            1024: { perPage: 4 },
+            768: { perPage: 3 },
+            480: { perPage: 2 },
           },
         }}
         extensions={{ AutoScroll }}

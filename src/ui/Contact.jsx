@@ -43,7 +43,7 @@ function Contact() {
             <FaLinkedin size={22} />
           </ContactBtn>
         </div>
-        <p className="text-sm text-stone-600">
+        <p className="text-center text-sm text-stone-600">
           You can also contact me directly on zabrzenskidev@gmail.com
         </p>
         <img
