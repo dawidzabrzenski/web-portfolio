@@ -12,7 +12,7 @@ function Contact() {
   const [formStatus, setFormStatus] = useState(false);
 
   return (
-    <section className="flex h-screen flex-col items-center justify-center bg-[#0A0A0A]">
+    <section className="flex h-screen flex-col items-center justify-center">
       <m.div
         transition={{ duration: 1 }}
         ref={ref}

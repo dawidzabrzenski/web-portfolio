@@ -31,7 +31,7 @@ const technologies = [
 
 function AboutMe() {
   return (
-    <section className="flex h-full flex-col-reverse items-center justify-center overflow-hidden bg-[#0A0A0A] py-12 pb-40 md:h-screen md:flex-row md:items-center md:justify-center md:px-12 md:py-0">
+    <section className="flex h-full flex-col-reverse items-center justify-center overflow-hidden py-12 pb-40 md:h-screen md:flex-row md:items-center md:justify-center md:px-12 md:py-0">
       <m.div
         initial={{ opacity: 0, x: -50 }}
         transition={{ delay: 0.2, duration: 1 }}

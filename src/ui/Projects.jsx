@@ -83,7 +83,7 @@ const ProjectMotionWrapper = ({ children, delay }) => (
 
 function Projects() {
   return (
-    <section className="flex flex-col items-center gap-12 bg-[#0A0A0A] px-4 py-24 text-main md:pb-20">
+    <section className="flex flex-col items-center gap-12 px-4 py-24 text-main md:pb-20">
       <h3 className="text-gradient-sec py-2 text-4xl font-semibold md:text-5xl">
         Featured Projects
       </h3>

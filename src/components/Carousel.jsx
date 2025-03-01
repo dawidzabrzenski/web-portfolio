@@ -21,7 +21,7 @@ const technologies = [
 
 export default function Carousel() {
   return (
-    <div className="w-full bg-[#0A0A0A] py-10">
+    <div className="w-full py-10">
       <Splide
         options={{
           type: "loop",
