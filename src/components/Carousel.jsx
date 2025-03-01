@@ -36,9 +36,9 @@ export default function Carousel() {
           },
           breakpoints: {
             1280: { perPage: 7 },
-            1024: { perPage: 4 },
-            768: { perPage: 3 },
-            480: { perPage: 2 },
+            1024: { perPage: 5 },
+            768: { perPage: 4 },
+            480: { perPage: 3 },
           },
         }}
         extensions={{ AutoScroll }}

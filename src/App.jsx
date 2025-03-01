@@ -30,7 +30,7 @@ function App() {
         <Section id="projects">
           <Projects />
         </Section>
-        <Section id="contact">
+        <Section id="carousel">
           <Carousel />
         </Section>
         <Section id="contact">
