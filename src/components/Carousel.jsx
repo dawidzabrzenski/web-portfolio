@@ -32,7 +32,7 @@ export default function Carousel() {
           pagination: false,
           drag: false,
           autoScroll: {
-            speed: 1,
+            speed: 0.5,
           },
           breakpoints: {
             1280: { perPage: 7 },
