@@ -7,7 +7,7 @@ const projectData = [
     name: "GFCorp Link",
     workInProgress: true,
     href: "https://github.com/dawidzabrzenski/gfcorp-link",
-    desc: "A modern web application designed to integrate with the Comarch XL ERP system via a REST API. Developed for my current company, this project streamlines data management and enhances usability through an intuitive frontend. Currently, the application supports user authentication with accounts stored in a MongoDB database. Passwords are securely encrypted, and successful login provides a JWT token, which is used to protect application routes and ensure secure access.",
+    desc: "A modern web application designed to integrate with the Comarch XL ERP system via a REST API and Websocket. Developed for my current company, this project streamlines data management and enhances usability through an intuitive frontend. The application supports user authentication with accounts stored in a MongoDB database. Passwords are securely encrypted, and successful login provides a JWT token, which is used to protect application routes and ensure secure access. It includes user management and permission control through customizable groups. The application allows users to view product prices, stock levels, and other essential information from the ERP database. It also provides advanced filtering, sorting, and customizable table column management.",
     techStack: [
       { name: "React", type: "primary" },
       { name: "Redux" },
