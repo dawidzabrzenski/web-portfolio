@@ -39,7 +39,10 @@ function Contact() {
           >
             <FaGithub size={22} />
           </ContactBtn>
-          <ContactBtn name="Linkedin">
+          <ContactBtn
+            name="Linkedin"
+            href="https://www.linkedin.com/in/dawid-zabrze%C5%84ski-505612359"
+          >
             <FaLinkedin size={22} />
           </ContactBtn>
         </div>

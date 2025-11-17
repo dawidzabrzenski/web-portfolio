@@ -92,11 +92,17 @@ function Hero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 3 }}
       >
-        <FaLinkedin
-          className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
-          color="#4A4A4A"
-          onClick={() => toast("Still working on it!", { icon: "😉" })}
-        />
+        <a
+          href="https://www.linkedin.com/in/dawid-zabrze%C5%84ski-505612359"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Explore more projects on my GitHub profile"
+        >
+          <FaLinkedin
+            className="size-6 transition-colors duration-300 hover:cursor-pointer hover:fill-main md:size-7"
+            color="#4A4A4A"
+          />
+        </a>
         <a
           href="https://www.github.com/dawidzabrzenski"
           target="_blank"

@@ -6,11 +6,7 @@ function ContactBtn({ children, name, handleClick, href }) {
       <div>
         <div
           onClick={() => {
-            if (name === "Linkedin") {
-              toast("Still working on it!", { icon: "😉" });
-            } else {
-              handleClick(true);
-            }
+            handleClick(true);
           }}
           className="flex items-center gap-2 rounded-full border border-[#A8A8A8] bg-[#090909] px-12 py-2 text-main transition-all duration-300 hover:cursor-pointer hover:bg-light-green hover:text-dark"
         >
