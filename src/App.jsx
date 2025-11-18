@@ -19,7 +19,7 @@ const Section = ({ id, children }) => (
 function App() {
   return (
     <LazyMotion features={domAnimation}>
-      <div className="scroll-container bg-bg-dark bg-main-bg h-screen snap-y snap-proximity overflow-x-hidden bg-[#0A0A0A] selection:bg-green-300">
+      <div className="bg-bg-dark bg-main-bg h-screen snap-proximity overflow-x-hidden bg-[#0A0A0A] selection:bg-green-300">
         <Navbar />
         <Section id="home">
           <Hero />

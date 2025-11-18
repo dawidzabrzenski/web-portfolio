@@ -42,29 +42,26 @@
   }
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #0bcb58;
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #055f29;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 
 .loader {
